@@ -16,36 +16,44 @@ setup_logging()
 async def lifespan(app):
     """Application lifespan context manager"""
     # Startup
-    print(f"🚀 Starting {settings.app_name} v{settings.app_version}")
-
+    print(f"🚀 Starting {settings.app.name} v{settings.app.version}")
+    
     # Validate data directory
     if validate_data_directory():
         print("✅ Data directory validated successfully")
     else:
         print("⚠️  Warning: Some data files may be missing")
-
-    print(f"📚 API Documentation available at: http://localhost:{settings.port}/docs")
-    print(f"🔄 ReDoc available at: http://localhost:{settings.port}/redoc")
-
+    
+    print(f"📚 API Documentation available at: http://localhost:{settings.app.port}/docs")
+    print(f"🔄 ReDoc available at: http://localhost:{settings.app.port}/redoc")
+    
+    # Show AI configuration status
+    ai_providers = list(settings.ai.providers.keys())
+    if ai_providers:
+        print(f"🤖 AI Providers configured: {', '.join([p.value for p in ai_providers])}")
+        print(f"🎯 Primary AI Provider: {settings.ai.primary_provider.value}")
+    else:
+        print("⚠️  Warning: No AI providers configured")
+    
     yield
-
+    
     # Shutdown
     print("🛑 Shutting down application")
 
 
 # Create FastAPI application
 app = FastAPI(
-    title=settings.app_name,
-    description="Backend API for theaditya.vercel.app portfolio website",
-    version=settings.app_version,
-    debug=settings.debug,
+    title=settings.app.name,
+    description="Backend API for theaditya.vercel.app portfolio website with AI-powered content management",
+    version=settings.app.version,
+    debug=settings.app.debug,
     lifespan=lifespan
 )
 
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins,
+    allow_origins=["*"],  # In production, specify actual origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -59,11 +67,23 @@ app.include_router(main_router, tags=["main"])
 app.include_router(data_router, prefix="/api", tags=["data"])
 app.include_router(ai_router, prefix="/ai", tags=["ai"])
 
+# Add root endpoint for health check
+@app.get("/", tags=["main"])
+async def root():
+    """Root endpoint with API information"""
+    return {
+        "message": f"Welcome to {settings.app.name} v{settings.app.version}",
+        "docs": "/docs",
+        "redoc": "/redoc",
+        "health": "/health"
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
         app,
-        host=settings.host,
-        port=settings.port,
-        reload=settings.debug
+        host=settings.app.host,
+        port=settings.app.port,
+        reload=settings.app.reload
     )

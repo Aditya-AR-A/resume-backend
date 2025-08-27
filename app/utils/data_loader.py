@@ -2,7 +2,7 @@ import json
 import logging
 from pathlib import Path
 from typing import Dict, Any, Optional
-from app.config.settings import settings
+from app.config.settings import app_settings
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -23,7 +23,7 @@ def load_json_data(filename: str) -> Dict[str, Any]:
         FileNotFoundError: If the file doesn't exist
         json.JSONDecodeError: If the JSON is invalid
     """
-    file_path = settings.data_dir / f"{filename}.json"
+    file_path = app_settings.data_dir / f"{filename}.json"
 
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -48,7 +48,7 @@ def get_data_file_path(filename: str) -> Path:
     Returns:
         Path object to the file
     """
-    return settings.data_dir / filename
+    return app_settings.data_dir / filename
 
 
 def validate_data_directory() -> bool:
@@ -58,15 +58,15 @@ def validate_data_directory() -> bool:
     Returns:
         True if valid, False otherwise
     """
-    if not settings.data_dir.exists():
-        logger.error(f"Data directory does not exist: {settings.data_dir}")
+    if not app_settings.data_dir.exists():
+        logger.error(f"Data directory does not exist: {app_settings.data_dir}")
         return False
 
     required_files = ['intro.json', 'jobs.json', 'projects.json']
     missing_files = []
 
     for file in required_files:
-        if not (settings.data_dir / file).exists():
+        if not (app_settings.data_dir / file).exists():
             missing_files.append(file)
 
     if missing_files:
@@ -79,7 +79,7 @@ def validate_data_directory() -> bool:
 def setup_logging():
     """Setup application logging"""
     logging.basicConfig(
-        level=logging.DEBUG if settings.debug else logging.INFO,
+        level=logging.DEBUG if app_settings.debug else logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.StreamHandler(),

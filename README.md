@@ -159,14 +159,94 @@ The API serves data from JSON files in the `data/` directory. To add new data:
 4. Create route handlers in `app/routes/data.py`
 5. Update the development log
 
-## AI System Architecture
+## AI System Features
 
-The AI system will consist of three main components:
-1. **Content Analyzer** - Analyzes portfolio content and user interactions
-2. **Page Controller** - Manages what content is displayed on different pages
-3. **Behavior Manager** - Controls page behavior based on AI decisions
+The backend includes an intelligent AI system with message classification and processing capabilities:
 
-*Note: AI endpoints are currently placeholders and will be implemented in future updates.*
+### 🤖 Message Classification
+- **Question Detection**: Identifies questions with 70-100% confidence
+- **Search Request Detection**: Recognizes search intents and filters
+- **Intent Analysis**: Determines specific user intents (project inquiry, experience search, etc.)
+- **Keyword Extraction**: Extracts relevant portfolio-related keywords
+- **Entity Recognition**: Identifies technologies, years, and other entities
+
+### 🧠 AI Endpoints
+
+#### Enhanced AI Chat
+```http
+POST /ai/chat
+```
+Send natural language messages to the AI system with automatic classification and processing.
+
+#### Message Classification
+```http
+POST /ai/classify
+```
+Classify messages without full processing - useful for frontend validation.
+
+#### Question Answering
+```http
+POST /ai/ask
+```
+Dedicated endpoint for question-answering with context awareness.
+
+#### Content Search
+```http
+POST /ai/search
+```
+Search through portfolio data with advanced filtering options.
+
+#### Content Analysis
+```http
+POST /ai/analyze
+```
+Analyze content with intelligent classification and keyword extraction.
+
+#### Content Generation
+```http
+POST /ai/generate
+```
+Generate content based on portfolio data and user context.
+
+### 🎯 Message Types Detected
+
+| Message Type | Confidence | Example |
+|-------------|------------|---------|
+| **Question** | 70-100% | "What projects have you worked on?" |
+| **Search Request** | 70-90% | "Find certificates related to AWS" |
+| **Command** | 50-80% | "Update my portfolio information" |
+| **Statement** | 50-70% | "Hello, how are you?" |
+
+### 🔧 Configuration
+
+#### Environment Variables
+Create a `.env` file based on `.env.example`:
+
+```bash
+# AI Configuration
+USE_LOCAL_AI=false
+USE_RENDER_AI=true
+RENDER_API_KEY=your_render_api_key_here
+
+# AI Features
+ENABLE_CACHING=true
+CACHE_TTL=3600
+```
+
+#### API Documentation
+- **Swagger JSON**: `swagger.json` - Ready for frontend integration
+- **Interactive Docs**: `http://localhost:8000/docs`
+- **ReDoc**: `http://localhost:8000/redoc`
+
+### 🚀 Quick AI Test
+
+Test the AI classification:
+
+```bash
+python test_ai_classification.py
+```
+
+This will demonstrate how the AI system classifies different types of messages and routes them to appropriate handlers.
 
 ## Deployment
 
