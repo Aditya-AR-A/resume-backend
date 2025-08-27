@@ -24,6 +24,11 @@ class LLMProviderManager:
     def add_provider(self, config: LLMConfig) -> None:
         """Add a provider configuration"""
         try:
+            # Avoid duplicate provider registrations
+            existing = self.providers.get(config.provider)
+            if existing is not None:
+                logger.debug(f"Provider {config.provider.value} already registered; skipping re-add")
+                return
             if config.provider == LLMProvider.GROQ:
                 provider = GroqProvider(config)
             elif config.provider == LLMProvider.OPENAI:
@@ -46,26 +51,24 @@ class LLMProviderManager:
 
     def get_available_providers(self) -> List[LLMProvider]:
         """Get list of available providers"""
-        available = []
-        for provider_type, provider in self.providers.items():
-            if provider.is_available():
-                available.append(provider_type)
-        return available
+    return [ptype for ptype, provider in self.providers.items() if provider.is_available()]
 
     async def generate_response(self, prompt: str, preferred_provider: Optional[LLMProvider] = None, **kwargs) -> LLMResponse:
         """Generate response using available providers with fallback"""
         providers_to_try = []
 
         # If preferred provider is specified and available, try it first
-        if preferred_provider and preferred_provider in self.providers:
-            if self.providers[preferred_provider].is_available():
-                providers_to_try.append(preferred_provider)
+        if preferred_provider and preferred_provider in self.providers and self.providers[preferred_provider].is_available():
+            providers_to_try.append(preferred_provider)
 
         # Add remaining providers in priority order
         for provider_type in self.provider_priority:
-            if provider_type not in providers_to_try and provider_type in self.providers:
-                if self.providers[provider_type].is_available():
-                    providers_to_try.append(provider_type)
+            if (
+                provider_type not in providers_to_try
+                and provider_type in self.providers
+                and self.providers[provider_type].is_available()
+            ):
+                providers_to_try.append(provider_type)
 
         if not providers_to_try:
             raise Exception("No available LLM providers")
@@ -91,10 +94,7 @@ class LLMProviderManager:
 
     def get_provider_configs(self) -> Dict[str, Dict[str, Any]]:
         """Get configuration information for all providers"""
-        configs = {}
-        for provider_type, provider in self.providers.items():
-            configs[provider_type.value] = provider.get_provider_info()
-        return configs
+    return {provider_type.value: provider.get_provider_info() for provider_type, provider in self.providers.items()}
 
     def get_default_configs(self) -> Dict[str, Dict[str, Any]]:
         """Get default configurations for all provider types"""
