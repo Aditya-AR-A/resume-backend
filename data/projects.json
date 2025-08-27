@@ -1,0 +1,158 @@
+[
+  {
+    "id": "real-estate-price",
+    "name": "Real Estate Price Prediction",
+    "type": "ml-service",
+    "description": "Machine learning project focused on predicting real estate prices using advanced regression techniques. Features comprehensive EDA, data cleaning, and interactive visualizations.",
+    "shortDescription": "ML-based real estate price prediction with interactive visualizations",
+    "thumbnail": "/projects/real-estate/thumbnail.jpg",
+    "category": "Machine Learning",
+    "featured": true,
+    "startDate": "2023-01-15",
+    "status": "completed",
+    "skills": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "Plotly",
+      "Seaborn",
+      "Jupyter",
+      "EDA",
+      "Regression"
+    ],
+    "links": {
+      "notebook": "https://colab.research.google.com/drive/1XdrINdSetdRp22WV6SnGdLWgVMMt7J-8?usp=sharing"
+    },
+    "demo": {
+      "type": "embedded",
+      "embedCode": "/projects/real_estate/real_estate_plot.html"
+    },
+    "model": {
+      "type": "ml-service",
+      "metrics": {
+        "accuracy": "92%",
+        "mse": "0.15"
+      }
+    },
+    "research": {
+      "notebook": "/projects/real_estate/notebook.html"
+    }
+  },
+  {
+    "id": "chess-helper",
+    "name": "Real-Time Chess Helper using YOLOv8",
+    "type": "computer-vision",
+    "description": "Built a robust real-time chessboard state recognition system using YOLOv8, capable of detecting and classifying chess pieces from live camera feeds at over 30 FPS. Achieved 98.7% mAP@50 IoU on diverse chessboard configurations using advanced training techniques and a curated Kaggle dataset. Enabled automated gameplay analysis and integration with chess engines for move prediction and AR learning tools.",
+    "shortDescription": "AI-powered chess analysis and training tool",
+    "category": "Computer Vision",
+    "featured": true,
+    "startDate": "2023-02-15",
+    "status": "completed",
+    "skills": [
+      "YOLOv8",
+      "Deep Learning",
+      "Computer Vision",
+      "Python",
+      "Kaggle",
+      "JavaScript",
+      "React",
+      "Chess.js",
+      "Stockfish",
+      "WebAssembly"
+    ],
+    "links": {
+      "github": "https://github.com/username/chess-helper",
+      "live": "https://chess-helper.example.com"
+    },
+    "deployment": {
+      "type": "cloud",
+      "platform": "Vercel",
+      "status": "active"
+    }
+  },
+  {
+    "id": "gender-emotion-detection",
+    "name": "Gender, Nationality & Emotion Detection",
+    "type": "computer-vision",
+    "description": "Deep learning system that simultaneously detects gender, nationality, and emotion from facial images using convolutional neural networks (CNN). Achieved 98%+ accuracy in multi-class detection.",
+    "shortDescription": "CNN-based facial analysis system with 98%+ accuracy",
+    "thumbnail": "/projects/gender-emotion/thumbnail.jpg",
+    "category": "Deep Learning",
+    "featured": true,
+    "startDate": "2023-03-01",
+    "status": "completed",
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "OpenCV",
+      "CNN",
+      "Deep Learning",
+      "Computer Vision"
+    ],
+    "model": {
+      "type": "computer-vision",
+      "framework": "TensorFlow",
+      "architecture": "CNN",
+      "metrics": {
+        "accuracy": "98%",
+        "inferenceTime": "45ms"
+      }
+    }
+  },
+  {
+    "id": "linkedin-sentiment",
+    "name": "LinkedIn Feed Sentiment Analysis",
+    "type": "nlp",
+    "description": "Natural Language Processing system that analyzes sentiment and engagement patterns in LinkedIn posts using advanced NLP techniques. Automated web scraping and sentiment analysis of LinkedIn posts, delivering 95%+ accuracy in content classification.",
+    "shortDescription": "NLP-based LinkedIn post analyzer",
+    "category": "Natural Language Processing",
+    "featured": false,
+    "startDate": "2023-04-15",
+    "status": "completed",
+    "skills": [
+      "Python",
+      "NLTK",
+      "Transformers",
+      "Sentiment Analysis",
+      "NLP",
+      "Data Visualization",
+      "Web Scraping"
+    ],
+    "model": {
+      "type": "nlp",
+      "base": "BERT",
+      "metrics": {
+        "accuracy": "91%",
+        "f1Score": "0.89"
+      }
+    }
+  },
+  {
+    "id": "copilot-extension",
+    "name": "VS Code Copilot Extension",
+    "type": "developer-tools",
+    "description": "Designed and implemented a VS Code extension integrating Copilot for intelligent code suggestions, supporting 16+ languages and frameworks. Enhanced developer experience with customizable autocompletion and intuitive UI, adopted by 500+ users.",
+    "shortDescription": "Enhanced VS Code extension for GitHub Copilot",
+    "category": "Developer Tools",
+    "featured": true,
+    "startDate": "2023-05-01",
+    "status": "active",
+    "skills": [
+      "TypeScript",
+      "VS Code API",
+      "Node.js",
+      "GitHub API",
+      "Extension Development",
+      "JavaScript"
+    ],
+    "links": {
+      "github": "https://github.com/username/copilot-extension",
+      "marketplace": "https://marketplace.visualstudio.com/items?itemName=username.copilot-extension"
+    },
+    "deployment": {
+      "type": "marketplace",
+      "platform": "VS Code Marketplace",
+      "status": "active"
+    }
+  }
+]

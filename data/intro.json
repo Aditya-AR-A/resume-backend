@@ -1,0 +1,54 @@
+{
+    "profileImage": {
+        "src": "https://avatars.githubusercontent.com/u/126697615?v=4",
+        "alt": "Profile"
+    },
+    "name": "Aditya Raj",
+    "title": "Data Scientist & Python Developer",
+    "about": "Software developer and data scientist with strong expertise in full-stack, deep learning, and machine learning. Experienced in building AI-powered tools (e.g. Chess Helper, VS Code Copilot extension), and delivering insights through structured models in Python/TensorFlow. Holds a Data Science Certification (IBM via Simplilearn) and demonstrated impact via notable projects in NLP, clustering, and predictive modeling.",
+    "socialLinks": {
+        "email": "adityaraj.anshukumar50@gmail.com",
+        "github": "https://github.com/Aditya-AR-A",
+        "linkedin": "https://www.linkedin.com/in/aditya-raj-921a08352/"
+    },
+    "styles": {
+        "section": {
+            "marginBottom": 64,
+            "padding": "48px 0 56px 0",
+            "background": "linear-gradient(135deg, #fffbe6 0%, #ffd966 100%)",
+            "borderRadius": 24,
+            "boxShadow": "0 4px 24px rgba(0,0,0,0.04)"
+        },
+        "profileImage": {
+            "width": 120,
+            "height": 120,
+            "borderRadius": "50%",
+            "border": "4px solid #fff8c6",
+            "boxShadow": "0 2px 8px rgba(0,0,0,0.08)",
+            "marginBottom": 24
+        },
+        "name": {
+            "fontSize": "2.8rem",
+            "color": "#222"
+        },
+        "title": {
+            "fontSize": "1.3rem",
+            "color": "#b38b00",
+            "margin": "12px 0 0 0",
+            "fontWeight": 500
+        },
+        "about": {
+            "color": "#444",
+            "margin": "24px 0 0 0",
+            "maxWidth": 540,
+            "fontSize": "1.08rem",
+            "lineHeight": 1.7
+        },
+        "socialLinks": {
+            "gap": 28,
+            "marginTop": 32,
+            "iconSize": 28,
+            "iconColor": "#b38b00"
+        }
+    }
+}

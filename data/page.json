@@ -1,0 +1,19 @@
+{
+    "sections": {
+        "jobs": {
+            "title": "Experience",
+            "viewMoreText": "View All Experience",
+            "viewMoreLink": "/jobs"
+        },
+        "projects": {
+            "title": "Projects",
+            "viewMoreText": "View All Projects",
+            "viewMoreLink": "/projects"
+        },
+        "certifications": {
+            "title": "Certifications",
+            "viewMoreText": "View All Certifications",
+            "viewMoreLink": "/certifications"
+        }
+    }
+}

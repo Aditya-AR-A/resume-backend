@@ -1,0 +1,67 @@
+{
+    "metadata": {
+        "title": "Aditya Raj - Data Scientist & Python Developer",
+        "description": "Portfolio of Aditya Raj - Software developer and data scientist with expertise in full-stack development, deep learning, and machine learning.",
+        "keywords": [
+            "Data Scientist",
+            "Python Developer",
+            "Machine Learning",
+            "Deep Learning",
+            "Full Stack Developer",
+            "AI Developer",
+            "Aditya Raj"
+        ],
+        "authors": [{ "name": "Aditya Raj" }],
+        "creator": "Aditya Raj",
+        "openGraph": {
+            "title": "Aditya Raj - Data Scientist & Python Developer",
+            "description": "Portfolio showcasing projects in data science, machine learning, and full-stack development.",
+            "url": "https://theaditya.vercel.app",
+            "siteName": "Aditya Raj Portfolio",
+            "images": [
+                {
+                    "url": "https://avatars.githubusercontent.com/u/126697615?v=4",
+                    "width": 1200,
+                    "height": 630,
+                    "alt": "Aditya Raj - Data Scientist & Python Developer"
+                }
+            ],
+            "locale": "en_US",
+            "type": "website"
+        },
+        "twitter": {
+            "card": "summary_large_image",
+            "title": "Aditya Raj - Data Scientist & Python Developer",
+            "description": "Portfolio showcasing projects in data science, machine learning, and full-stack development.",
+            "images": ["https://avatars.githubusercontent.com/u/126697615?v=4"]
+        },
+        "robots": "index, follow"
+    },
+    "footer": {
+        "copyrightText": "Ad. All rights reserved."
+    },
+    "viewport": {
+        "width": "device-width",
+        "initialScale": 1
+    },
+    "contact": [
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/Aditya-AR-A",
+            "className": "text-gray-400 hover:text-white transition-colors",
+            "icon": "/github.svg"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": "https://www.linkedin.com/in/aditya-raj-921a08352/",
+            "className": "text-gray-400 hover:text-white transition-colors",
+            "icon": "/linkedin.svg"
+        },
+        {
+            "platform": "Email",
+            "url": "mailto:adityaraj.anshukumar50@gmail.com",
+            "className": "text-gray-400 hover:text-white transition-colors",
+            "icon": "/email.svg"
+        }
+    ]
+}

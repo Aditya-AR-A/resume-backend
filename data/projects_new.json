@@ -1,0 +1,148 @@
+[
+  {
+    "id": "llm-agent-integration",
+    "name": "LLM-Powered Call Agent Integration System",
+    "description": "Enterprise-level AI agent system integrating LLMs with real-time call transcription and automated decision making. Built a comprehensive workflow where LLMs process client-specific prompts and execute appropriate actions based on conversation context. Features FastAPI backend with WebSocket support, SIP configuration for automated call handling, LiveKit integration for real-time audio processing, and OpenAI API for intelligent transcription and response generation.",
+    "shortDescription": "Real-time AI call agent with LLM decision-making and automated workflows",
+    "thumbnail": "/projects/llm-agent/thumbnail.svg",
+    "category": "AI/ML Engineering",
+    "featured": true,
+    "skills": [
+      "Python",
+      "FastAPI",
+      "WebSockets",
+      "LLMs",
+      "OpenAI API",
+      "LiveKit",
+      "SIP Protocol",
+      "Real-time Transcription",
+      "Prompt Engineering",
+      "Agent Workflows",
+      "API Integration",
+      "Voice Processing",
+      "Decision Trees",
+      "Client Customization"
+    ],
+    "githubUrl": "#",
+    "jobId": "ai-python-dev-2025"
+  },
+  {
+    "id": "real-estate-price",
+    "name": "Real Estate Price Prediction",
+    "description": "Machine learning project focused on predicting real estate prices using advanced regression techniques. Features comprehensive EDA, data cleaning, and interactive visualizations.",
+    "shortDescription": "ML-based real estate price prediction with interactive visualizations",
+    "thumbnail": "/projects/real-estate/thumbnail.svg",
+    "category": "Machine Learning",
+    "featured": true,
+    "skills": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "Plotly",
+      "Seaborn",
+      "Jupyter",
+      "EDA",
+      "Regression"
+    ],
+    "githubUrl": "https://github.com/Aditya-AR-A/real-estate-prediction",
+    "demoUrl": "https://colab.research.google.com/drive/1XdrINdSetdRp22WV6SnGdLWgVMMt7J-8?usp=sharing"
+  },
+  {
+    "id": "chess-helper",
+    "name": "Real-Time Chess Helper using YOLOv8",
+    "description": "Built a robust real-time chessboard state recognition system using YOLOv8, capable of detecting and classifying chess pieces from live camera feeds at over 30 FPS. Achieved 98.7% mAP@50 IoU on diverse chessboard configurations.",
+    "shortDescription": "AI-powered chess analysis and training tool",
+    "thumbnail": "/projects/chess-helper/thumbnail.svg",
+    "category": "Computer Vision",
+    "featured": true,
+    "skills": [
+      "YOLOv8",
+      "Deep Learning",
+      "Computer Vision",
+      "Python",
+      "JavaScript",
+      "React",
+      "Chess.js",
+      "Stockfish"
+    ],
+    "githubUrl": "https://github.com/Aditya-AR-A/chess-helper",
+    "demoUrl": "https://chess-helper-demo.vercel.app"
+  },
+  {
+    "id": "gender-emotion-detection",
+    "name": "Gender, Nationality & Emotion Detection",
+    "description": "Deep learning system that simultaneously detects gender, nationality, and emotion from facial images using convolutional neural networks (CNN). Achieved 98%+ accuracy in multi-class detection.",
+    "shortDescription": "CNN-based facial analysis system with 98%+ accuracy",
+    "thumbnail": "/projects/gender-emotion/thumbnail.svg",
+    "category": "Deep Learning",
+    "featured": true,
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "OpenCV",
+      "CNN",
+      "Deep Learning",
+      "Computer Vision"
+    ],
+    "githubUrl": "https://github.com/Aditya-AR-A/gender-emotion-detection"
+  },
+  {
+    "id": "portfolio-website",
+    "name": "Personal Portfolio Website",
+    "description": "Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features dark mode, smooth animations, and optimized performance.",
+    "shortDescription": "Modern portfolio website with Next.js and Tailwind CSS",
+    "thumbnail": "/projects/portfolio/thumbnail.svg",
+    "category": "Web Development",
+    "featured": false,
+    "skills": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "Vercel"
+    ],
+    "githubUrl": "https://github.com/Aditya-AR-A/ResumeVercel",
+    "demoUrl": "https://aditya-portfolio.vercel.app"
+  },
+  {
+    "id": "vs-code-extension",
+    "name": "Planto.ai VS Code Extension",
+    "description": "Developed a comprehensive VS Code extension for Planto.ai that revolutionizes the coding experience by providing context-aware AI assistance embedded directly in the development environment. The extension features intelligent auto-completion, screenshot-to-UI code conversion, Figma-to-code transformation, and seamless integration with backend schemas for automated code generation. Built with a focus on scalability and team collaboration, supporting large development teams with advanced workflow management.",
+    "shortDescription": "AI-powered VS Code extension with context-aware coding assistance and visual-to-code automation",
+    "thumbnail": "/projects/vscode-extension/thumbnail.svg",
+    "category": "Developer Tools",
+    "featured": true,
+    "skills": [
+      "TypeScript",
+      "VS Code Extension Development",
+      "AI Integration",
+      "Context Management",
+      "React",
+      "Next.js",
+      "GUI Design",
+      "Figma API",
+      "LLMs",
+      "Team Collaboration"
+    ],
+    "githubUrl": "https://github.com/codingpro-ai/planto-vscode",
+    "demoUrl": "https://planto.ai/",
+    "jobId": "ds-ml-intern-plantoai-2024"
+  },
+  {
+    "id": "data-science-capstone",
+    "name": "Data Science Capstone Project",
+    "description": "Comprehensive data science project involving end-to-end machine learning pipeline, from data collection to model deployment.",
+    "shortDescription": "End-to-end ML pipeline with deployment",
+    "thumbnail": "/projects/capstone/thumbnail.svg",
+    "category": "Data Science",
+    "featured": false,
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Data Analysis",
+      "Model Deployment",
+      "Statistics"
+    ],
+    "githubUrl": "https://github.com/Aditya-AR-A/data-science-capstone"
+  }
+]

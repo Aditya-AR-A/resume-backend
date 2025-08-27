@@ -1,0 +1,326 @@
+[
+    {
+      "name": "Data Science",
+      "file": "Final Data Science Certificate.pdf",
+      "provider": "Simplilearn",
+      "field": "Data Science",
+      "skills": [
+          "Python", 
+          "Data Science", 
+          "Statistics",
+          "Machine Learning",
+          "Programming",
+          "OOPs",
+          "Data Visualization",
+          "Numpy",
+          "Pandas",
+          "Matplotlib",
+          "Seaborn",
+          "Plotly",
+          "Tableau",
+          "Scikit-learn",
+          "TensorFlow",
+          "Keras",
+          "PyTorch",
+          "CNN",
+          "RNN",
+          "LSTM",
+          "Autoencoders",
+          "Gan",
+          "Transfer Learning",
+          "Reinforcement Learning"
+      ],
+      "issueDate": "2024-03-02",
+      "credentialId": null,
+      "description": "Comprehensive program covering the full data science pipeline using Python. It includes data preprocessing, EDA, statistics, machine learning algorithms, deep learning (CNN, RNN, GAN), NLP basics, data visualization (Matplotlib, Seaborn, Plotly, Tableau), and advanced frameworks like TensorFlow and PyTorch.",
+      "featured": false
+    },
+  {
+    "name": "Data Science with Python",
+    "file": "SimpliLearn Data Science with Python Certificate.pdf",
+    "provider": "Simplilearn",
+    "field": "Data Science",
+    "skills": [
+      "Python",
+      "Data Science",
+      "Machine Learning",
+      "Statistics",
+      "Programming",
+      "OOPs",
+      "Data Visualization"
+    ],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Focused on Python’s application in data science. Covered data types, control flow, OOPs, statistical concepts, linear regression, clustering, and basic data visualization techniques.",
+    "featured": false
+  },
+  {
+    "name": "PCAP: Certified Associate Python Programmer",
+    "file": "PCAP.pdf",
+    "provider": "Python Institute",
+    "field": "Programming",
+    "skills": [
+        "Python", 
+        "Programming",
+        "OOPs",
+        "Tkinter",
+        "GUI",
+        "File Handling",
+        "Modules",
+        "Exceptions"
+    ],
+    "issueDate": "2024-01-18",
+    "credentialId": null,
+    "description": "Globally recognized certification validating foundational to intermediate Python programming knowledge including OOP, functions, exception handling, file I/O, modules, and basic GUI design using Tkinter.",
+    "featured": true
+  },
+  {
+    "name": "HackerRank SQL (Intermediate)",
+    "file": "sql_intermediate certificate.pdf",
+    "provider": "HackerRank",
+    "field": "Databases",
+    "skills": [
+        "SQL", 
+        "Databases",
+        "DBMS",
+        "RDBMS",
+        "Data Management",
+        "Schema"
+    ],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Assessed intermediate SQL proficiency. Included writing complex queries, multi-table joins, nested queries, aggregations, constraints, and relational schema design.",
+    "featured": false
+  },
+  {
+    "name": "Deep Learning",
+    "file": "SimpliLearn Deep Learning.pdf",
+    "provider": "Simplilearn",
+    "field": "Deep Learning",
+    "skills": [
+        "Deep Learning", 
+        "Neural Networks",
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "Machine Learning",
+        "Statistics",
+        "Programming",
+        "OOPs",
+        "Data Visualization",
+        "CNN",
+        "RNN",
+        "LSTM",
+        "Autoencoders",
+        "Gan",
+        "Transfer Learning",
+        "Reinforcement Learning"
+    ],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "In-depth module on designing and training deep neural networks. Covered forward and backpropagation, CNNs, RNNs, LSTMs, GANs, autoencoders, and advanced model tuning with TensorFlow, PyTorch, and Keras.",
+    "featured": false
+  },
+  {
+    "name": "Chat GPT Webinar",
+    "file": "Chat GPT webinar.pdf",
+    "provider": "Other",
+    "field": "AI",
+    "skills": [
+        "AI", 
+        "ChatGPT"
+    ],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Participated in a live session exploring ChatGPT's architecture, prompt engineering techniques, use in automation and productivity, and ethical considerations.",
+    "featured": false
+  },
+  {
+    "name": "Microsoft Excel",
+    "file": "Coursera MG3RNM55QYYC.pdf",
+    "provider": "Coursera",
+    "field": "Excel",
+    "skills": [
+      "Excel",
+      "Python",
+      "Data Visualization"
+    ],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Training in core Excel operations including data handling, pivot tables, formulas, data cleaning, and integrating Python for automation and visualization tasks.",
+    "featured": false
+  },
+  {
+    "name": "Data Science Capstone",
+    "file": "Data Science Capstone.pdf",
+    "provider": "Simplilearn",
+    "field": "Data Science",
+    "skills": [
+      "Data Science",
+      "Capstone",
+      "Python",
+      "Machine Learning",
+      "Statistics",
+      "Programming",
+      "Data Visualization"
+    ],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Real-world capstone project using full-stack data science workflow. Included problem formulation, data acquisition, EDA, feature engineering, model building, and performance evaluation.",
+    "featured": false
+  },
+
+  {
+    "name": "IBM Python",
+    "file": "IBM PY0101EN Certificate _ Simplilearn.pdf",
+    "provider": "IBM",
+    "field": "Python",
+    "skills": [
+      "Python",
+      "IBM",
+      "Programming",
+      "OOPs",
+      "Data Visualization"
+    ],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Introduction to Python programming from IBM. Covered variables, data types, control structures, OOPs, file operations, and Python libraries used in analytics and data visualization.",
+    "featured": false
+  },
+  {
+    "name": "IBM deep Learning",
+    "file": "IBM deep Learning.pdf",
+    "provider": "IBM",
+    "field": "Deep Learning",
+    "skills": ["Deep Learning", "IBM"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Focused course on foundational deep learning principles, model development, optimization, and usage in real-world applications using IBM tools and frameworks.",
+    "featured": false
+  },
+  {
+    "name": "Industry Master SimplilEarn",
+    "file": "Industry Master SimplilEarn.pdf",
+    "provider": "Simplilearn",
+    "field": "Industry",
+    "skills": ["Industry"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Summarizes completion of core modules across data science and industry-focused training, signifying readiness for practical, job-oriented roles.",
+    "featured": false
+  },
+  {
+    "name": "SimpliLearn MySQL",
+    "file": "MySQL.pdf",
+    "provider": "Simplilearn",
+    "field": "Databases",
+    "skills": ["SQL", "MySQL", "Databases", "DBMS", "RDBMS", "Data Management"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Course covering MySQL fundamentals: schema design, CRUD operations, joins, indexing, normalization, and query optimization for relational databases.",
+    "featured": false
+  },
+  {
+    "name": "Simplearn Certificates Data Scientist",
+    "file": "Simplearn Certificates Data Scientist.pdf",
+    "provider": "Simplilearn",
+    "field": "Data Science",
+    "skills": [
+      "Data Science",
+      "Data Analysis",
+      "Data Visualization",
+      "Data Management",
+      "Python",
+      "Statistics",
+      "Machine Learning"
+    ],
+    "issueDate": "2024-04-01",
+    "credentialId": null,
+    "description": "Bundled certificate representing completion of multiple in-depth modules in data science, ML, Python, statistics, and visualization — aligned with real-world applications.",
+    "featured": true
+  },
+  {
+    "name": "SimpliLearn Data Science with R",
+    "file": "SimpliLearn Data Science with R.pdf",
+    "provider": "Simplilearn",
+    "field": "Data Science",
+    "skills": [
+      "Data Science",
+      "R",
+      "GGplot",
+      "Statistics",
+      "Statical Modelling",
+      "Machine Learning"
+    ],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Applied data science training using R language. Topics included data manipulation, visualization with ggplot2, statistical inference, and machine learning models.",
+    "featured": false
+  },
+  {
+    "name": "SimpliLearn ML",
+    "file": "SimpliLearn ML.pdf",
+    "provider": "Simplilearn",
+    "field": "Machine Learning",
+    "skills": ["Machine Learning"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Covers core ML concepts: supervised and unsupervised algorithms, SVM, KNN, decision trees, random forests, model evaluation, and bias-variance tradeoff.",
+    "featured": false
+  },
+  {
+    "name": "Maths Refresher",
+    "file": "SimpliLearn Maths Refresher Certificate.pdf",
+    "provider": "Simplilearn",
+    "field": "Mathematics",
+    "skills": ["Mathematics"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "A refresher course on key mathematical concepts essential for ML and data science, including algebra, matrices, probability, and statistics.",
+    "featured": false
+  },
+  {
+    "name": "Python for data sciences",
+    "file": "SimpliLearn Python for data sciences Certificate.pdf",
+    "provider": "Simplilearn",
+    "field": "Python",
+    "skills": ["Python", "Data Science"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Focuses on using Python for data exploration, preprocessing, analysis, and basic model building in a data science context.",
+    "featured": false
+  },
+  {
+    "name": "Statisitical Essentials",
+    "file": "SimpliLearn Statisitical EssentialsCertificate.pdf",
+    "provider": "Simplilearn",
+    "field": "Statistics",
+    "skills": ["Statistics"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Provides a foundation in descriptive and inferential statistics, hypothesis testing, distributions, and statistical reasoning.",
+    "featured": false
+  },
+  {
+    "name": "Tableau",
+    "file": "SimpliLearn Tableau.pdf",
+    "provider": "Simplilearn",
+    "field": "Data Visualization",
+    "skills": ["Tableau", "Data Visualization"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Hands-on Tableau training covering dashboards, calculated fields, filters, charts, and visual storytelling to communicate insights.",
+    "featured": false
+  },
+  {
+    "name": "SQL Basic",
+    "file": "sql_basic certificate.pdf",
+    "provider": "HackerRank",
+    "field": "Databases",
+    "skills": ["SQL", "Databases"],
+    "issueDate": null,
+    "credentialId": null,
+    "description": "Validates foundational SQL knowledge including SELECT queries, filtering, ordering, and basic joins.",
+    "featured": false
+  }
+]
