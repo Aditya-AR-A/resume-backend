@@ -1,10 +1,11 @@
-from abc import ABC, abstractmethod
-from typing import Dict, Any, Optional
 import time
-import logging
-from app.models.schemas import LLMConfig, LLMResponse, LLMProvider
+from abc import ABC, abstractmethod
+from typing import Any, Dict, Optional
 
-logger = logging.getLogger(__name__)
+from app.models.schemas import LLMConfig, LLMProvider, LLMResponse
+from app.utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 class LLMProviderBase(ABC):

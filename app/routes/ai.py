@@ -72,16 +72,7 @@ async def classify_message(request: AIRequest):
 async def search_content(request: SearchRequest):
     """Search endpoint with enhanced filtering and LLM-powered semantic search"""
     try:
-        # This would integrate with the data service to perform actual searches
-        # For now, return a placeholder response
-        return SearchResult(
-            items=[],
-            total_count=0,
-            search_time=0.1,
-            query=request.query,
-            search_type=request.search_type,
-            pagination=None  # Would be populated with actual pagination
-        )
+        return await ai_service.semantic_search(request)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Search error: {str(e)}")
 

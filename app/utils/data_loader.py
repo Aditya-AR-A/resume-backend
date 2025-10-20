@@ -1,12 +1,11 @@
 import json
-import logging
 from pathlib import Path
 from typing import Dict, Any, Optional
-from app.config.settings import app_settings
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from app.config.settings import app_settings
+from app.utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def load_json_data(filename: str) -> Dict[str, Any]:
@@ -74,15 +73,3 @@ def validate_data_directory() -> bool:
         return False
 
     return True
-
-
-def setup_logging():
-    """Setup application logging"""
-    logging.basicConfig(
-        level=logging.DEBUG if app_settings.debug else logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.StreamHandler(),
-            logging.FileHandler('app.log')
-        ]
-    )

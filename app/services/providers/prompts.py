@@ -1,10 +1,12 @@
-import yaml
 import os
-import logging
-from typing import Dict, Any, Optional
 from pathlib import Path
+from typing import Dict
 
-logger = logging.getLogger(__name__)
+import yaml
+
+from app.utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 class PromptManager:

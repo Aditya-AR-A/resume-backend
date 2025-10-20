@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional, Union
+from typing import Dict, Any, List, Optional
 import time
 from datetime import datetime
 from collections import defaultdict, Counter
@@ -33,13 +33,15 @@ class DataService:
     def get_projects_data() -> List[ProjectData]:
         """Get projects data with proper typing"""
         data = load_json_data("projects")
-        return [ProjectData(**project) for project in data]
+        projects = [ProjectData(**project) for project in data]
+        return DataService._attach_job_relations(projects)
 
     @staticmethod
     def get_new_projects_data() -> List[ProjectData]:
         """Get new projects data with proper typing"""
         data = load_json_data("projects_new")
-        return [ProjectData(**project) for project in data]
+        projects = [ProjectData(**project) for project in data]
+        return DataService._attach_job_relations(projects)
 
     @staticmethod
     def get_certificates_data() -> List[CertificateData]:
@@ -67,6 +69,39 @@ class DataService:
             if project.id == project_id:
                 return project
         return None
+
+    @staticmethod
+    def _build_project_job_map() -> Dict[str, List[str]]:
+        """Build a mapping of project IDs to related job IDs."""
+        mapping: Dict[str, List[str]] = defaultdict(list)
+        jobs = DataService.get_jobs_data()
+
+        for job in jobs:
+            for project_id in getattr(job, "projectIds", []):
+                if project_id:
+                    mapping[project_id].append(job.id)
+
+        return mapping
+
+    @staticmethod
+    def _attach_job_relations(projects: List[ProjectData]) -> List[ProjectData]:
+        """Attach job relationships to projects for frontend consumption."""
+        project_to_jobs = DataService._build_project_job_map()
+        enriched_projects: List[ProjectData] = []
+
+        for project in projects:
+            related_job_ids = project_to_jobs.get(project.id, [])
+            if related_job_ids:
+                enriched_projects.append(
+                    project.model_copy(update={
+                        "jobId": related_job_ids[0],
+                        "relatedJobIds": related_job_ids
+                    })
+                )
+            else:
+                enriched_projects.append(project)
+
+        return enriched_projects
 
     @staticmethod
     def get_job_by_id(job_id: str) -> Optional[JobData]:

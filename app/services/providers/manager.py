@@ -1,13 +1,15 @@
 import asyncio
-import logging
-from typing import Dict, List, Optional, Any
-from app.models.schemas import LLMConfig, LLMResponse, LLMProvider
+from typing import Any, Dict, List, Optional
+
+from app.models.schemas import LLMConfig, LLMProvider, LLMResponse
+from app.utils.logger import get_logger
+
+from .anthropic import AnthropicProvider
 from .base import LLMProviderBase
 from .groq import GroqProvider
 from .openai import OpenAIProvider
-from .anthropic import AnthropicProvider
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 class LLMProviderManager:
@@ -51,7 +53,7 @@ class LLMProviderManager:
 
     def get_available_providers(self) -> List[LLMProvider]:
         """Get list of available providers"""
-    return [ptype for ptype, provider in self.providers.items() if provider.is_available()]
+        return [ptype for ptype, provider in self.providers.items() if provider.is_available()]
 
     async def generate_response(self, prompt: str, preferred_provider: Optional[LLMProvider] = None, **kwargs) -> LLMResponse:
         """Generate response using available providers with fallback"""
@@ -94,7 +96,7 @@ class LLMProviderManager:
 
     def get_provider_configs(self) -> Dict[str, Dict[str, Any]]:
         """Get configuration information for all providers"""
-    return {provider_type.value: provider.get_provider_info() for provider_type, provider in self.providers.items()}
+        return {provider_type.value: provider.get_provider_info() for provider_type, provider in self.providers.items()}
 
     def get_default_configs(self) -> Dict[str, Dict[str, Any]]:
         """Get default configurations for all provider types"""

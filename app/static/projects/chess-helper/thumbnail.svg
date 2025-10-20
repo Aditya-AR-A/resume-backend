@@ -1,0 +1,19 @@
+<!-- Placeholder SVG for Chess Helper Project -->
+<svg width="400" height="160" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="160" fill="#1f2937"/>
+  <!-- Chessboard pattern -->
+  <rect x="50" y="30" width="20" height="20" fill="#ffffff"/>
+  <rect x="70" y="50" width="20" height="20" fill="#ffffff"/>
+  <rect x="90" y="30" width="20" height="20" fill="#ffffff"/>
+  <rect x="110" y="50" width="20" height="20" fill="#ffffff"/>
+  <rect x="130" y="30" width="20" height="20" fill="#ffffff"/>
+  <rect x="150" y="50" width="20" height="20" fill="#ffffff"/>
+  <rect x="50" y="70" width="20" height="20" fill="#ffffff"/>
+  <rect x="70" y="90" width="20" height="20" fill="#ffffff"/>
+  <rect x="90" y="70" width="20" height="20" fill="#ffffff"/>
+  <rect x="110" y="90" width="20" height="20" fill="#ffffff"/>
+  <rect x="130" y="70" width="20" height="20" fill="#ffffff"/>
+  <rect x="150" y="90" width="20" height="20" fill="#ffffff"/>
+  <text x="200" y="90" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Chess Helper</text>
+  <text x="200" y="110" text-anchor="middle" fill="#d1d5db" font-family="Arial, sans-serif" font-size="12">YOLOv8 + Computer Vision</text>
+</svg>

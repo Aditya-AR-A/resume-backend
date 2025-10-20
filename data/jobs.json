@@ -5,7 +5,7 @@
     "company": "Addmin Web World",
     "companyLogo": "https://addminwebworld.com/img/admologo-removebg.png",
     "position": "Full-time",
-    "location": "Remote",
+    "location": "Chandigarh, India",
     "startDate": "2025-06-01",
     "isCurrent": true,
     "description": "Developing and integrating AI models with SIP call agents to enable intelligent responses and function triggering. Leading projects involving OpenAI agent SDKs for hiring automation and previously for taxi booking services.",
@@ -16,7 +16,10 @@
       "Lead new project for hiring automation using OpenAI agent SDKs",
       "Previously built and maintained AI-powered taxi booking agent system",
       "Collaborate with cross-functional teams to deploy scalable AI solutions",
-      "Implement backend APIs and services using Django and FastAPI"
+      "Implement backend APIs and services using Django and FastAPI",
+      "Developed an LLM-based automation platform for cab-service call handling, cutting manual intervention by 40%.",
+      "Built an AI-driven recruitment screening system that filters and ranks candidates, reducing HR review time by 50%.",
+      "Designed Tableau dashboards tracking automation KPIs including response latency, success rates, and efficiency gains."
     ],
     "skills": [
       "Python",
@@ -33,7 +36,8 @@
       "Twilio",
       "Dialog Management",
       "Hiring Automation",
-      "Taxi Booking Automation"
+      "Taxi Booking Automation",
+      "Tableau"
     ],
     "projectIds": [
       "llm-agent-integration"
@@ -41,42 +45,37 @@
     "featured": true
   },
   {
-    "id": "freelance-data-migration-2023-2024",
-    "title": "Freelance Data Analytics & Migration Specialist",
-    "company": "Independent Contractor",
-    "position": "Freelance",
-    "location": "Remote",
+    "id": "data-scientist-cis-2024",
+    "title": "Data Scientist",
+    "company": "Corporate Incentive Solutions Pvt. Ltd.",
+    "companyLogo": "https://www.cispl.net.in/corporates/images/logo.png",
+    "position": "Full-time",
+    "location": "Chandigarh, India",
     "startDate": "2024-09-01",
     "endDate": "2025-05-31",
     "isCurrent": false,
-    "description": "Led comprehensive data migration and analytics modernization projects for multiple clients. Specialized in migrating legacy SAS workflows to modern SQL databases and Python-based analytics solutions. Transformed manual Excel-based reporting systems into automated, interactive dashboards using Python, Plotly, and Quarto. Successfully delivered SAS to Power BI migration projects, enabling clients to leverage modern business intelligence tools.",
+    "description": "Modernized insurance analytics by rebuilding legacy Excel reporting in modern BI stacks and automating KPI delivery for business leadership.",
     "responsibilities": [
-      "Migrated complex SAS data processing workflows to SQL databases for improved performance and maintainability",
-      "Automated manual Excel-based reporting systems using Python, Plotly, and Quarto",
-      "Developed interactive dashboards and visualizations replacing static Excel charts",
-      "Led SAS to Power BI migration projects for business intelligence modernization",
-      "Created comprehensive documentation and training materials for client teams",
-      "Optimized data pipelines resulting in 70% reduction in processing time",
-      "Implemented data validation and quality checks for migration accuracy"
+      "Migrated fatality-claim dashboards from Excel into Power BI, Tableau, and Qlik Sense/QlikView for automated visualization and scheduling.",
+      "Automated monthly, quarterly, and annual claim reports with Python ETL pipelines and Plotly-based analytics.",
+      "Delivered dashboards for growth forecasts and operational metrics to drive data-backed planning decisions.",
+      "Built analytics to track claim trends, processing time, and anomalies, reducing manual reporting effort by 60%."
     ],
     "skills": [
-      "SAS",
-      "SQL",
+      "Power BI",
+      "Tableau",
+      "Qlik Sense",
+      "QlikView",
       "Python",
       "Plotly",
-      "Quarto",
-      "Power BI",
-      "Data Migration",
-      "Dashboard Development",
-      "Excel Automation",
+      "ETL",
+      "Insurance Analytics",
+      "Automation",
       "Data Visualization",
-      "ETL Processes",
-      "Business Intelligence",
-      "Data Analytics",
-      "Pandas",
-      "PostgreSQL"
+      "Excel",
+      "KPI Reporting"
     ],
-    "featured": false
+    "featured": true
   },
   {
     "id": "ds-ml-intern-plantoai-2024",
@@ -93,7 +92,8 @@
       "Designed and implemented the GUI for the planto.ai VS Code extension",
       "Integrated LLMs for better context management and response quality",
       "Collaborated with the team to shape the initial phases of the product",
-      "Worked primarily with TypeScript and Next.js"
+      "Worked primarily with TypeScript and Next.js",
+      "Developed AI-powered features for the VS Code copilot extension with fine-tuning and UX enhancements across 16+ languages."
     ],
     "skills": [
       "TypeScript",
@@ -110,6 +110,6 @@
       "company": "https://codingpro.online/",
       "project": "https://planto.ai/"
     },
-    "featured": true
+    "featured": false
   }
 ]

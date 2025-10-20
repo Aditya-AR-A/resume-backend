@@ -1,11 +1,13 @@
 import asyncio
 import time
-import logging
-from typing import Dict, Any
-from app.models.schemas import LLMConfig, LLMResponse, LLMProvider
+from typing import Any, Dict
+
+from app.models.schemas import LLMConfig, LLMProvider, LLMResponse
+from app.utils.logger import get_logger
+
 from .base import LLMProviderBase
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 class AnthropicProvider(LLMProviderBase):

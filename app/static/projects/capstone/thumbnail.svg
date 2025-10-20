@@ -1,0 +1,25 @@
+<!-- Placeholder SVG for Data Science Capstone Project -->
+<svg width="400" height="160" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="160" fill="#f8fafc"/>
+  <!-- Data visualization elements -->
+  <rect x="60" y="60" width="8" height="40" fill="#3b82f6"/>
+  <rect x="75" y="50" width="8" height="50" fill="#10b981"/>
+  <rect x="90" y="70" width="8" height="30" fill="#f59e0b"/>
+  <rect x="105" y="45" width="8" height="55" fill="#ef4444"/>
+  <rect x="120" y="65" width="8" height="35" fill="#8b5cf6"/>
+  <!-- ML pipeline -->
+  <circle cx="200" cy="60" r="8" fill="#3b82f6"/>
+  <circle cx="230" cy="60" r="8" fill="#10b981"/>
+  <circle cx="260" cy="60" r="8" fill="#f59e0b"/>
+  <circle cx="290" cy="60" r="8" fill="#ef4444"/>
+  <line x1="208" y1="60" x2="222" y2="60" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="238" y1="60" x2="252" y2="60" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="268" y1="60" x2="282" y2="60" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <text x="200" y="120" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Data Science Capstone</text>
+  <text x="200" y="140" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">End-to-End ML Pipeline</text>
+</svg>

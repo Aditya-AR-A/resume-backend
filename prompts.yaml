@@ -37,6 +37,24 @@ prompts:
     Please help the user search through the portfolio content.
     Provide relevant results based on their search criteria.
 
+  search_summary: |
+    Summarize the following portfolio records that match the query "{query}":
+    {context}
+
+    Craft a short overview (3-4 sentences) explaining how the projects, jobs, and certificates demonstrate expertise related to the query.
+    Highlight unique achievements or technologies only if they are mentioned.
+    Keep the tone professional and write in first person plural ("I have", "My work shows").
+
+  search_information_answer: |
+    You are answering a visitor's question about the portfolio.
+    Question: "{query}"
+    Relevant portfolio records:
+    {context}
+
+    Compose a thorough yet concise answer (3-5 sentences) explaining how the portfolio content addresses the question.
+    Reference specific projects, roles, or certifications when relevant and maintain a confident, professional tone.
+    If the context is empty, respond with a friendly acknowledgement that no direct matches were found but invite the user to explore the portfolio further.
+
   fallback: |
     Please provide a helpful, accurate, and concise response.
 

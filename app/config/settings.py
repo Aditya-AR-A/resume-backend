@@ -1,9 +1,15 @@
-from pydantic_settings import BaseSettings
+import logging
 from pathlib import Path
 from typing import Dict, Optional
+
+from pydantic import field_validator
+from pydantic_settings import BaseSettings
 from app.models.schemas import (
     AppConfig, DatabaseConfig, CacheConfig, AIConfig, LLMConfig, LLMProvider, Settings
 )
+
+
+BASE_DIR = Path(__file__).parent.parent.parent
 
 
 class AppSettings(BaseSettings):
@@ -26,14 +32,21 @@ class AppSettings(BaseSettings):
     cache_max_size: int = 1000
 
     # Data Directory
-    data_dir: Path = Path(__file__).parent.parent.parent / "data"
+    data_dir: Path = BASE_DIR / "data"
+
+    # Static Assets
+    static_dir: Path = BASE_DIR / "app" / "static"
+    asset_path: str = "assets"
 
     # CORS
     cors_origins: list = ["*"]
 
     # Logging
+    log_dir: Path = Path(__file__).parent.parent / "logs"
     log_level: str = "INFO"
-    log_file: str = "app.log"
+    log_complete_file: str = "complete.log"
+    log_session_prefix: str = "session"
+    log_use_colors: bool = True
 
     # Security
     secret_key: str = "your-secret-key-here"
@@ -51,7 +64,7 @@ class AppSettings(BaseSettings):
     ai_timeout: int = 30
 
     # Groq Configuration
-    groq_model: str = "llama3-8b-8192"
+    groq_model: str = "meta-llama/llama-guard-4-12b"
     groq_temperature: float = 0.7
     groq_max_tokens: int = 1000
 
@@ -69,6 +82,51 @@ class AppSettings(BaseSettings):
         env_file = [".env", ".env.local"]
         case_sensitive = False
         extra = "ignore"  # Allow extra fields from env files
+
+    @field_validator("data_dir", mode="before")
+    @classmethod
+    def _resolve_data_dir(cls, value: Optional[Path | str]) -> Path:
+        """Normalize data directory, falling back to repository data folder."""
+        if value is None:
+            return BASE_DIR / "data"
+
+        if isinstance(value, Path):
+            if not value.is_absolute():
+                return (BASE_DIR / value).resolve()
+            return value
+
+        value_str = str(value).strip()
+        if not value_str:
+            return BASE_DIR / "data"
+
+        candidate = Path(value_str).expanduser()
+        if not candidate.is_absolute():
+            return (BASE_DIR / candidate).resolve()
+        return candidate
+
+    @field_validator("static_dir", mode="before")
+    @classmethod
+    def _resolve_static_dir(cls, value: Optional[Path | str]) -> Path:
+        """Normalize static asset directory."""
+        if value is None:
+            return BASE_DIR / "app" / "static"
+
+        if isinstance(value, Path):
+            if not value.is_absolute():
+                return (BASE_DIR / value).resolve()
+            return value
+
+        candidate = Path(str(value).strip()).expanduser()
+        if not candidate.is_absolute():
+            return (BASE_DIR / candidate).resolve()
+        return candidate
+
+    @field_validator("asset_path", mode="before")
+    @classmethod
+    def _normalize_asset_path(cls, value: Optional[str]) -> str:
+        """Ensure asset path is usable for mounting."""
+        normalized = (value or "assets").strip().strip("/")
+        return normalized or "assets"
 
     def get_app_config(self) -> AppConfig:
         """Get application configuration"""
@@ -174,10 +232,13 @@ def validate_settings() -> bool:
     if not app_settings.data_dir.exists():
         errors.append(f"Data directory does not exist: {app_settings.data_dir}")
 
+    if not app_settings.static_dir.exists():
+        errors.append(f"Static directory does not exist: {app_settings.static_dir}")
+
     if errors:
-        print("Configuration errors:")
+        logger = logging.getLogger(__name__)
         for error in errors:
-            print(f"  - {error}")
+            logger.warning(error)
         return False
 
     return True
@@ -185,16 +246,18 @@ def validate_settings() -> bool:
 
 def print_settings_summary():
     """Print a summary of current settings"""
-    print("=== Application Settings Summary ===")
-    print(f"App Name: {app_settings.app_name}")
-    print(f"Version: {app_settings.app_version}")
-    print(f"Debug Mode: {app_settings.debug}")
-    print(f"Host: {app_settings.host}:{app_settings.port}")
-    print(f"Data Directory: {app_settings.data_dir}")
+    logger = logging.getLogger(__name__)
+    logger.info("=== Application Settings Summary ===")
+    logger.info(f"App Name: {app_settings.app_name}")
+    logger.info(f"Version: {app_settings.app_version}")
+    logger.info(f"Debug Mode: {app_settings.debug}")
+    logger.info(f"Host: {app_settings.host}:{app_settings.port}")
+    logger.info(f"Data Directory: {app_settings.data_dir}")
+    logger.info(f"Static Directory: {app_settings.static_dir} (mounted at /{app_settings.asset_path})")
 
-    print("\n=== AI Configuration ===")
-    print(f"Primary Provider: {app_settings.primary_llm_provider.value}")
-    print(f"Cache Enabled: {app_settings.ai_cache_enabled}")
+    logger.info("=== AI Configuration ===")
+    logger.info(f"Primary Provider: {app_settings.primary_llm_provider.value}")
+    logger.info(f"Cache Enabled: {app_settings.ai_cache_enabled}")
 
     providers = []
     if app_settings.groq_api_key:
@@ -204,11 +267,11 @@ def print_settings_summary():
     if app_settings.anthropic_api_key:
         providers.append("Anthropic")
 
-    print(f"Available Providers: {', '.join(providers) if providers else 'None'}")
-    print("=" * 40)
+    logger.info(f"Available Providers: {', '.join(providers) if providers else 'None'}")
+    logger.info("=" * 40)
 
 
 # Validate settings on import
 if not validate_settings():
-    print("Warning: Some settings are not properly configured!")
+    logging.getLogger(__name__).warning("Some settings are not properly configured!")
     print_settings_summary()

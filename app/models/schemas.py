@@ -1,5 +1,5 @@
-from pydantic import BaseModel, Field
-from typing import List, Dict, Any, Optional, Union
+from pydantic import BaseModel, Field, model_validator
+from typing import List, Dict, Any, Optional
 from datetime import datetime
 from enum import Enum
 
@@ -46,13 +46,21 @@ class CacheHeaders(BaseModel):
 # DATA MODELS - STRUCTURED SCHEMAS
 # ============================================================================
 
+class SocialLinks(BaseModel):
+    """Structured social/contact links"""
+    email: str
+    github: str
+    linkedin: str
+    additional: Optional[Dict[str, str]] = None
+
+
 class IntroData(BaseModel):
     """Introduction/Profile data model"""
     profileImage: Optional[Dict[str, str]] = None
     name: str
     title: str
     about: str
-    socialLinks: Dict[str, str]
+    socialLinks: SocialLinks
     styles: Optional[Dict[str, Any]] = None
 
 
@@ -68,9 +76,12 @@ class JobData(BaseModel):
     endDate: Optional[str] = None
     isCurrent: bool = False
     description: str
-    responsibilities: List[str]
-    skills: List[str]
+    responsibilities: List[str] = Field(default_factory=list)
+    skills: List[str] = Field(default_factory=list)
     achievements: Optional[List[str]] = None
+    links: Optional[Dict[str, str]] = None
+    featured: bool = False
+    projectIds: List[str] = Field(default_factory=list)
 
 
 class ProjectData(BaseModel):
@@ -87,10 +98,49 @@ class ProjectData(BaseModel):
     endDate: Optional[str] = None
     status: str
     skills: List[str]
+    jobId: Optional[str] = None
+    relatedJobIds: List[str] = Field(default_factory=list)
     links: Optional[Dict[str, str]] = None
+    demoUrl: Optional[str] = None
+    githubUrl: Optional[str] = None
     demo: Optional[Dict[str, Any]] = None
     model: Optional[Dict[str, Any]] = None
     research: Optional[Dict[str, Any]] = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def _normalize_links(cls, values: Dict[str, Any]) -> Dict[str, Any]:
+        links = values.get("links")
+        # Allow list-form links but convert to simple dict for consistency
+        if isinstance(links, list):
+            link_map: Dict[str, str] = {}
+            for item in links:
+                if not isinstance(item, dict):
+                    continue
+                link_type = item.get("type") or item.get("label")
+                url = item.get("url")
+                if link_type and url:
+                    link_map[str(link_type).lower()] = str(url)
+            values["links"] = link_map or None
+            links = values.get("links")
+
+        if isinstance(links, dict):
+            demo_fallbacks = [
+                "demo",
+                "live",
+                "marketplace",
+                "notebook",
+                "preview",
+                "article"
+            ]
+            for key in demo_fallbacks:
+                if not values.get("demoUrl") and links.get(key):
+                    values["demoUrl"] = links.get(key)
+            if not values.get("githubUrl") and links.get("source"):
+                values["githubUrl"] = links.get("source")
+            values.setdefault("githubUrl", links.get("github"))
+
+        return values
 
 
 class CertificateData(BaseModel):
@@ -104,11 +154,25 @@ class CertificateData(BaseModel):
     expiryDate: Optional[str] = None
     credentialId: Optional[str] = None
     credentialUrl: Optional[str] = None
+    description: Optional[str] = None
+    featured: bool = False
+
+
+class ContactLink(BaseModel):
+    """Contact or social link displayed in layout/footer"""
+    platform: str
+    url: str
+    className: Optional[str] = None
+    icon: Optional[str] = None
 
 
 class LayoutData(BaseModel):
     """Layout configuration model"""
-    sections: List[str]
+    metadata: Optional[Dict[str, Any]] = None
+    footer: Optional[Dict[str, Any]] = None
+    viewport: Optional[Dict[str, Any]] = None
+    contact: Optional[List[ContactLink]] = None
+    sections: Optional[List[str]] = None
     theme: Optional[str] = None
     animations: Optional[Dict[str, Any]] = None
 
@@ -131,6 +195,19 @@ class SearchSection(BaseModel):
     items: List[Dict[str, Any]]
     count: int
     highlights: Optional[List[Dict[str, Any]]] = None
+
+
+class SearchResultItem(BaseModel):
+    """Flattened search result item with type metadata"""
+    type: str
+    data: Dict[str, Any]
+
+
+class SearchSummary(BaseModel):
+    """LLM-generated search summary"""
+    title: str
+    body: str
+    highlights: Optional[Dict[str, List[str]]] = None
 
 
 class UnifiedSearchResponse(BaseModel):
@@ -323,12 +400,16 @@ class SearchRequest(BaseModel):
 
 class SearchResult(BaseModel):
     """Search result model"""
-    items: List[Dict[str, Any]]
+    items: List[SearchResultItem]
     total_count: int
     search_time: float
     query: str
     search_type: str
     pagination: PaginationMeta
+    summary: Optional[SearchSummary] = None
+    sections: Optional[List[SearchSection]] = None
+    llm_response: Optional[str] = None
+    intent: Optional[str] = None
 
 
 class QuestionAnsweringRequest(BaseModel):
