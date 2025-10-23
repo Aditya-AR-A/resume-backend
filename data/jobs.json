@@ -40,7 +40,8 @@
       "Tableau"
     ],
     "projectIds": [
-      "llm-agent-integration"
+      "llm-agent-integration",
+      "recruitment-automation-platform"
     ],
     "featured": true
   },
@@ -75,6 +76,10 @@
       "Excel",
       "KPI Reporting"
     ],
+    "projectIds": [
+      "qlik-powerbi-suite",
+      "fatality-claims-analytics"
+    ],
     "featured": true
   },
   {
@@ -105,7 +110,9 @@
       "AI Integration",
       "Team Collaboration"
     ],
-    "projectIds": ["plantoai-extension"],
+    "projectIds": [
+      "plantoai-vscode-copilot"
+    ],
     "links": {
       "company": "https://codingpro.online/",
       "project": "https://planto.ai/"

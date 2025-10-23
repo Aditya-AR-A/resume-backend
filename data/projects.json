@@ -1,11 +1,104 @@
 [
   {
+    "id": "llm-agent-integration",
+    "name": "LLM-Powered Call Agent Integration",
+    "type": "ai-platform",
+    "description": "Enterprise-grade agentic workflow unifying OpenAI function calling, LiveKit streaming, and SIP integration to automate cab-service and hiring hotlines. Built orchestration to listen to live conversations, route intents, and trigger downstream automations with audit-ready transcripts.",
+    "shortDescription": "Real-time LLM call agent that automates taxi booking and hiring workflows",
+    "thumbnail": "/projects/llm-agent/thumbnail.svg",
+    "category": "AI/ML Engineering",
+    "featured": true,
+    "startDate": "2025-06-01",
+    "status": "active",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "LLMs",
+      "OpenAI API",
+      "LiveKit",
+      "WebSockets",
+      "SIP Integration",
+      "Prompt Engineering",
+      "Automation"
+    ],
+    "jobId": "ai-python-dev-2025"
+  },
+  {
+    "id": "recruitment-automation-platform",
+    "name": "AI Recruitment Automation Platform",
+    "type": "ai-platform",
+    "description": "LLM-driven hiring assistant that triages candidate resumes, ranks applicants, and triggers follow-up sequences. Combined function calling, scoring heuristics, and dashboarding to cut HR review time by 50% while preserving explainability.",
+    "shortDescription": "LLM workflow that screens and ranks candidates with automated handoffs",
+    "thumbnail": "/projects/recruitment-automation/thumbnail.svg",
+    "category": "AI/ML Engineering",
+    "featured": false,
+    "startDate": "2025-07-01",
+    "status": "active",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "LLMs",
+      "Prompt Engineering",
+      "Automation",
+      "Tableau",
+      "Workflow Orchestration"
+    ],
+    "jobId": "ai-python-dev-2025"
+  },
+  {
+    "id": "qlik-powerbi-suite",
+    "name": "Qlik & Power BI Dashboard Suite",
+    "type": "analytics-platform",
+    "description": "Modernized legacy insurance analytics by rebuilding KPI dashboards across Qlik Sense, QlikView, Tableau, and Power BI. Automated scheduled refreshes, blended SQL extracts, and Python ETL jobs to deliver leadership-ready fatality claim and growth reporting.",
+    "shortDescription": "Unified BI dashboards with automated KPI refresh for insurance analytics",
+    "thumbnail": "/projects/qlik-powerbi/thumbnail.svg",
+    "category": "Business Intelligence",
+    "featured": true,
+    "startDate": "2024-09-01",
+    "endDate": "2025-05-31",
+    "status": "completed",
+    "skills": [
+      "Power BI",
+      "Tableau",
+      "Qlik Sense",
+      "QlikView",
+      "Python",
+      "Plotly",
+      "SQL",
+      "Automation"
+    ],
+    "jobId": "data-scientist-cis-2024"
+  },
+  {
+    "id": "fatality-claims-analytics",
+    "name": "Fatality Claims Forecasting & Automation",
+    "type": "analytics-platform",
+    "description": "Automated fatality-claim forecasting by blending SQL extracts, Python ETL, and Power BI scenario planning. Surfaced anomaly detection, processing-time KPIs, and forecasting dashboards that reduced manual reporting by 60%.",
+    "shortDescription": "Predictive analytics stack for claim trends and processing KPIs",
+    "thumbnail": "/projects/fatality-claims/thumbnail.svg",
+    "category": "Business Intelligence",
+    "featured": false,
+    "startDate": "2024-10-01",
+    "endDate": "2025-04-30",
+    "status": "completed",
+    "skills": [
+      "Power BI",
+      "Tableau",
+      "Python",
+      "Automation",
+      "Forecasting",
+      "SQL",
+      "Plotly"
+    ],
+    "jobId": "data-scientist-cis-2024"
+  },
+  {
     "id": "real-estate-price",
     "name": "Real Estate Price Prediction",
     "type": "ml-service",
     "description": "Machine learning project focused on predicting real estate prices using advanced regression techniques. Features comprehensive EDA, data cleaning, and interactive visualizations.",
     "shortDescription": "ML-based real estate price prediction with interactive visualizations",
-  "thumbnail": "/projects/real-estate/thumbnail.svg",
+    "thumbnail": "/projects/real-estate/thumbnail.svg",
     "category": "Machine Learning",
     "featured": true,
     "startDate": "2023-01-15",
@@ -76,7 +169,7 @@
     "type": "computer-vision",
     "description": "Deep learning system that simultaneously detects gender, nationality, and emotion from facial images using convolutional neural networks (CNN). Achieved 98%+ accuracy in multi-class detection.",
     "shortDescription": "CNN-based facial analysis system with 98%+ accuracy",
-  "thumbnail": "/projects/gender-emotion/thumbnail.svg",
+    "thumbnail": "/projects/gender-emotion/thumbnail.svg",
     "category": "Deep Learning",
     "featured": true,
     "startDate": "2023-03-01",
@@ -128,31 +221,30 @@
     }
   },
   {
-    "id": "copilot-extension",
-    "name": "VS Code Copilot Extension",
+    "id": "plantoai-vscode-copilot",
+    "name": "Planto.ai VS Code Copilot",
     "type": "developer-tools",
-    "description": "Designed and implemented a VS Code extension integrating Copilot for intelligent code suggestions, supporting 16+ languages and frameworks. Enhanced developer experience with customizable autocompletion and intuitive UI, adopted by 500+ users.",
-    "shortDescription": "Enhanced VS Code extension for GitHub Copilot",
+    "description": "Developed a Planto.ai-branded VS Code extension delivering context-aware AI assistance, screenshot-to-UI generation, and schema-aligned code scaffolding. Led UX, TypeScript architecture, and LLM integration to support 16+ programming languages for distributed teams.",
+    "shortDescription": "AI-assisted VS Code workspace with visual-to-code automation",
+    "thumbnail": "/projects/vscode-extension/thumbnail.svg",
     "category": "Developer Tools",
     "featured": true,
-    "startDate": "2023-05-01",
-    "status": "active",
+    "startDate": "2024-06-01",
+    "endDate": "2024-09-30",
+    "status": "beta",
     "skills": [
       "TypeScript",
       "VS Code API",
-      "Node.js",
-      "GitHub API",
-      "Extension Development",
-      "JavaScript"
+      "LLMs",
+      "Context Management",
+      "Next.js",
+      "UX Design",
+      "Figma API"
     ],
     "links": {
-      "github": "https://github.com/username/copilot-extension",
-      "marketplace": "https://marketplace.visualstudio.com/items?itemName=username.copilot-extension"
+      "github": "https://github.com/codingpro-ai/planto-vscode",
+      "live": "https://planto.ai/"
     },
-    "deployment": {
-      "type": "marketplace",
-      "platform": "VS Code Marketplace",
-      "status": "active"
-    }
+    "jobId": "ds-ml-intern-plantoai-2024"
   }
 ]
