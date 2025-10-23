@@ -103,6 +103,7 @@ resume-backend/
   - LLM-related schemas (`LLMRequest`, `LLMResponse`, `AgentExecution`)
 - [x] Added proper validation and type safety
 - [x] Enhanced error handling with structured responses
+- [x] Enriched project metadata with highlights, metrics, and automated asset sync (`scripts/sync_project_assets.py`)
 
 ### Phase 2: ✅ **Unified Search & Aggregation**
 - [x] **Individual Resource Access**: `/api/projects/{id}`, `/api/jobs/{id}`, etc.
@@ -223,6 +224,12 @@ resume-backend/
    # Production mode
    uvicorn app.main:app --host 0.0.0.0 --port 8000
    ```
+
+6. **Sync Project Assets** *(optional)*
+   ```bash
+   python -m scripts.sync_project_assets --dry-run
+   ```
+   Remove `--dry-run` to persist updates to `data/projects.json` after adding new static files.
 
 ### Environment Configuration
 

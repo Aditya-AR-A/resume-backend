@@ -5,6 +5,7 @@ Backend API for Aditya's portfolio website (theaditya.vercel.app) built with Fas
 ## Overview
 
 This project provides a RESTful API backend for a portfolio website with the following features:
+
 - FastAPI-based routing system with modular architecture
 - Data serving from JSON files
 - AI agent system for content management and page behavior control
@@ -14,7 +15,7 @@ This project provides a RESTful API backend for a portfolio website with the fol
 
 ## Project Structure
 
-```
+```text
 resume-backend/
 ├── main.py                 # Main entry point
 ├── requirements.txt        # Python dependencies
@@ -50,6 +51,8 @@ resume-backend/
 │   └── utils/             # Utility functions
 │       ├── __init__.py
 │       └── data_loader.py # Data loading utilities
+├── scripts/               # Maintenance and automation scripts
+│   └── sync_project_assets.py
 └── tests/                 # Test files
     └── __init__.py
 ```
@@ -57,23 +60,27 @@ resume-backend/
 ## Quick Start
 
 ### Prerequisites
+
 - Python 3.11+
 - Virtual environment (automatically configured)
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Aditya-AR-A/resume-backend.git
 cd resume-backend
 ```
 
-2. Install dependencies:
+1. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the development server:
+1. Run the development server:
+
 ```bash
 python main.py
 ```
@@ -83,19 +90,23 @@ The API will be available at `http://localhost:8000`
 ### API Documentation
 
 Once the server is running, you can access:
-- **Interactive API docs**: http://localhost:8000/docs (Swagger UI)
-- **Alternative docs**: http://localhost:8000/redoc
+
+- **Interactive API docs**: <http://localhost:8000/docs> (Swagger UI)
+- **Alternative docs**: <http://localhost:8000/redoc>
 
 ## API Endpoints
 
 ### Core Endpoints
+
 - `GET /` - API information and status
 - `GET /health` - Health check
 - `GET /docs` - Interactive API documentation (Swagger UI)
 - `GET /redoc` - Alternative API documentation
 
 ### Data Endpoints
+
 All data endpoints are prefixed with `/api`:
+
 - `GET /api/intro` - Introduction data
 - `GET /api/jobs` - Work experience data
 - `GET /api/projects` - Projects data
@@ -105,7 +116,9 @@ All data endpoints are prefixed with `/api`:
 - `GET /api/page` - Page configuration
 
 ### AI System Endpoints (Placeholders)
+
 All AI endpoints are prefixed with `/ai`:
+
 - `POST /ai/analyze` - Content analysis (to be implemented)
 - `POST /ai/generate` - Content generation (to be implemented)
 - `GET /ai/status` - AI system status
@@ -115,6 +128,7 @@ All AI endpoints are prefixed with `/ai`:
 The application follows a modular, layered architecture:
 
 ### Layers
+
 1. **Routes Layer** (`app/routes/`): HTTP request handlers and API endpoints
 2. **Services Layer** (`app/services/`): Business logic and data processing
 3. **Models Layer** (`app/models/`): Data validation and serialization with Pydantic
@@ -123,6 +137,7 @@ The application follows a modular, layered architecture:
 6. **Middleware Layer** (`app/middleware/`): Custom request/response processing
 
 ### Key Features
+
 - **Separation of Concerns**: Each layer has a specific responsibility
 - **Dependency Injection**: Services are injected into routes
 - **Configuration Management**: Environment-based settings with pydantic-settings
@@ -133,8 +148,10 @@ The application follows a modular, layered architecture:
 ## Development
 
 ### Logging
+
 All development activities are tracked in `development_log.txt` with the following format:
-```
+
+```text
 [Date: YYYY-MM-DD HH:MM]
 [Type: UPDATE/FEATURE/BUGFIX/DEBUG]
 [Status: STARTED/IN_PROGRESS/COMPLETED/FAILED]
@@ -145,6 +162,7 @@ All development activities are tracked in `development_log.txt` with the followi
 ```
 
 ### Adding New Features
+
 1. **Models**: Define Pydantic models in `app/models/schemas.py`
 2. **Services**: Implement business logic in `app/services/`
 3. **Routes**: Create route handlers in `app/routes/`
@@ -152,7 +170,9 @@ All development activities are tracked in `development_log.txt` with the followi
 5. **Test**: Verify functionality
 
 ### Data Files
+
 The API serves data from JSON files in the `data/` directory. To add new data:
+
 1. Create a new JSON file in the `data/` directory
 2. Add corresponding Pydantic models in `app/models/schemas.py`
 3. Implement service methods in `app/services/data_service.py`
@@ -164,6 +184,7 @@ The API serves data from JSON files in the `data/` directory. To add new data:
 The backend includes an intelligent AI system with message classification and processing capabilities:
 
 ### 🤖 Message Classification
+
 - **Question Detection**: Identifies questions with 70-100% confidence
 - **Search Request Detection**: Recognizes search intents and filters
 - **Intent Analysis**: Determines specific user intents (project inquiry, experience search, etc.)
@@ -173,39 +194,51 @@ The backend includes an intelligent AI system with message classification and pr
 ### 🧠 AI Endpoints
 
 #### Enhanced AI Chat
+
 ```http
 POST /ai/chat
 ```
+
 Send natural language messages to the AI system with automatic classification and processing.
 
 #### Message Classification
+
 ```http
 POST /ai/classify
 ```
+
 Classify messages without full processing - useful for frontend validation.
 
 #### Question Answering
+
 ```http
 POST /ai/ask
 ```
+
 Dedicated endpoint for question-answering with context awareness.
 
 #### Content Search
+
 ```http
 POST /ai/search
 ```
+
 Search through portfolio data with advanced filtering options.
 
 #### Content Analysis
+
 ```http
 POST /ai/analyze
 ```
+
 Analyze content with intelligent classification and keyword extraction.
 
 #### Content Generation
+
 ```http
 POST /ai/generate
 ```
+
 Generate content based on portfolio data and user context.
 
 ### 🎯 Message Types Detected
@@ -220,6 +253,7 @@ Generate content based on portfolio data and user context.
 ### 🔧 Configuration
 
 #### Environment Variables
+
 Create a `.env` file based on `.env.example`:
 
 ```bash
@@ -233,10 +267,11 @@ ENABLE_CACHING=true
 CACHE_TTL=3600
 ```
 
-#### API Documentation
+#### API Documentation Links
+
 - **Swagger JSON**: `swagger.json` - Ready for frontend integration
-- **Interactive Docs**: `http://localhost:8000/docs`
-- **ReDoc**: `http://localhost:8000/redoc`
+- **Interactive Docs**: <http://localhost:8000/docs>
+- **ReDoc**: <http://localhost:8000/redoc>
 
 ### 🚀 Quick AI Test
 
@@ -251,17 +286,21 @@ This will demonstrate how the AI system classifies different types of messages a
 ## Deployment
 
 ### Local Development
+
 ```bash
 python main.py
 ```
 
 ### Production
+
 Use a production ASGI server like Uvicorn:
+
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 ```
 
 ### Docker (Future)
+
 Docker support will be added in future updates.
 
 ## Contributing

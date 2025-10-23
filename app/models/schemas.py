@@ -84,6 +84,26 @@ class JobData(BaseModel):
     projectIds: List[str] = Field(default_factory=list)
 
 
+class AssetDisplayMode(str, Enum):
+    """Rendering behaviour for embedded assets"""
+
+    SCROLLABLE = "scrollable"
+    UNSCROLLABLE = "unscrollable"
+
+
+class ProjectAsset(BaseModel):
+    """Metadata describing a tangible project asset or attachment"""
+
+    title: str
+    file: Optional[str] = None
+    description: Optional[str] = None
+    type: Optional[str] = None
+    sourceUrl: Optional[str] = None
+    automated: bool = False
+    displayMode: Optional[AssetDisplayMode] = None
+    embedCode: Optional[str] = None
+
+
 class ProjectData(BaseModel):
     """Project data model"""
     id: str
@@ -106,6 +126,9 @@ class ProjectData(BaseModel):
     demo: Optional[Dict[str, Any]] = None
     model: Optional[Dict[str, Any]] = None
     research: Optional[Dict[str, Any]] = None
+    highlights: List[str] = Field(default_factory=list)
+    metrics: Optional[Dict[str, str]] = None
+    assets: Optional[Dict[str, List["ProjectAsset"]]] = None
 
     @model_validator(mode="before")
     @classmethod

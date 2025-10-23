@@ -21,7 +21,17 @@
       "Prompt Engineering",
       "Automation"
     ],
-    "jobId": "ai-python-dev-2025"
+    "jobId": "ai-python-dev-2025",
+    "highlights": [
+      "Connected Twilio SIP trunks, LiveKit streaming audio, and OpenAI Realtime APIs to maintain human-like dialogues during dispatcher calls.",
+      "Implemented intent router and tool execution layer that triggers ride bookings, OTP verification, and CRM updates off live speech.",
+      "Delivered compliance-friendly transcripts and analytics dashboards so operations teams can audit conversations in minutes."
+    ],
+    "metrics": {
+      "callAutomation": "35+ concurrent dispatcher calls automated",
+      "handoffReduction": "40% reduction in manual escalations",
+      "latency": "<250 ms average turn latency"
+    }
   },
   {
     "id": "recruitment-automation-platform",
@@ -43,7 +53,17 @@
       "Tableau",
       "Workflow Orchestration"
     ],
-    "jobId": "ai-python-dev-2025"
+    "jobId": "ai-python-dev-2025",
+    "highlights": [
+      "Designed candidate parsing pipeline that enriches resumes with skill embeddings and ATS-ready summaries in under 20 seconds.",
+      "Introduced fairness guardrails and scoring explainers so recruiters can trace every shortlisting decision.",
+      "Published hiring dashboards tracking funnel velocity, candidate NPS, and conversion by skill cluster."
+    ],
+    "metrics": {
+      "screeningAcceleration": "50% reduction in manual resume screening time",
+      "autoFollowUps": "Automated email/SMS nudges for 100% of shortlisted candidates",
+      "atsReadyProfiles": "85% of profiles exported directly to ATS with zero edits"
+    }
   },
   {
     "id": "qlik-powerbi-suite",
@@ -67,7 +87,17 @@
       "SQL",
       "Automation"
     ],
-    "jobId": "data-scientist-cis-2024"
+    "jobId": "data-scientist-cis-2024",
+    "highlights": [
+      "Reverse-engineered Excel heavy dashboards into modular BI datasets with governed measures and role-level security.",
+      "Built parameterised visuals for claims severity, turnaround times, and policy growth so executives could slice KPIs in real time.",
+      "Coordinated cross-tool release train keeping Power BI, Tableau, Qlik Sense, and QlikView assets in sync each sprint."
+    ],
+    "metrics": {
+      "refreshCadence": "4 BI stacks refreshed automatically every 60 minutes",
+      "stakeholderCoverage": "120+ leadership users onboarded across business units",
+      "manualReportingDrop": "Eliminated 18 legacy Excel workbooks from monthly reporting"
+    }
   },
   {
     "id": "fatality-claims-analytics",
@@ -90,7 +120,17 @@
       "SQL",
       "Plotly"
     ],
-    "jobId": "data-scientist-cis-2024"
+    "jobId": "data-scientist-cis-2024",
+    "highlights": [
+      "Built PyCaret forecasting jobs that surface 12-week claim inflow projections directly inside Power BI.",
+      "Set up anomaly detection and SLA breach alerts, piping notifications into Teams and email workflows.",
+      "Packaged actuarial-ready extracts so finance teams could ingest the same curated dataset for what-if analysis."
+    ],
+    "metrics": {
+      "reportingEffort": "60% reduction in manual spreadsheet work",
+      "forecastAccuracy": "±6% variance against actual claim volumes",
+      "alerting": "24/7 SLA breach notifications rolled out to operations"
+    }
   },
   {
     "id": "real-estate-price",
@@ -114,21 +154,71 @@
       "Regression"
     ],
     "links": {
-      "notebook": "https://colab.research.google.com/drive/1XdrINdSetdRp22WV6SnGdLWgVMMt7J-8?usp=sharing"
+      "notebook": "https://colab.research.google.com/drive/1XdrINdSetdRp22WV6SnGdLWgVMMt7J-8?usp=sharing",
+      "github": "https://github.com/Aditya-AR-A/real-estate-prediction"
     },
     "demo": {
       "type": "embedded",
-      "embedCode": "/projects/real_estate/real_estate_plot.html"
+      "embedCode": "/projects/real-estate/real_estate_plot.html"
     },
     "model": {
       "type": "ml-service",
       "metrics": {
-        "accuracy": "92%",
-        "mse": "0.15"
+        "r2": "0.92",
+        "rmse": "12.8"
       }
     },
     "research": {
-      "notebook": "/projects/real_estate/notebook.html"
+      "notebook": "/projects/real-estate/notebook.html"
+    },
+    "highlights": [
+      "Curated 70+ engineered features covering locality scores, amenity counts, and floor insights before model training.",
+      "Compared linear, tree-based, and boosting regressors with consistent cross-validation to choose a production model.",
+      "Shipped interactive Plotly dashboards so stakeholders can slice predictions by budget, area, and property class."
+    ],
+    "metrics": {
+      "trainTime": "<3 minutes on 50k records",
+      "featureCoverage": "78 engineered features retained",
+      "interactiveUsers": "Dashboard shared with 20+ prospective buyers"
+    },
+    "assets": {
+      "html": [
+        {
+          "title": "Interactive price segmentation dashboard",
+          "file": "/projects/real-estate/real_estate_plot.html",
+          "description": "Plotly visualization exported for standalone viewing.",
+          "type": "plot",
+          "automated": true,
+          "displayMode": "unscrollable"
+        },
+        {
+          "title": "Exploratory analysis notebook",
+          "file": "/projects/real-estate/notebook.html",
+          "description": "Static HTML export of the exploratory Jupyter notebook.",
+          "type": "notebook",
+          "automated": true,
+          "displayMode": "scrollable"
+        }
+      ],
+      "dashboards": [
+        {
+          "title": "Tableau Interactive Dashboard",
+          "description": "Embedded Tableau Public visualization summarizing property insights.",
+          "type": "tableau",
+          "displayMode": "unscrollable",
+          "sourceUrl": "https://public.tableau.com/views/RealEstate-AdityaRaj/Final",
+          "embedCode": "<div class='tableauPlaceholder' id='viz1761234763395' style='position: relative'><noscript><a href='#'><img alt='Final ' src='https://public.tableau.com/static/images/Re/RealEstate-AdityaRaj/Final/1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views/RealEstate-AdityaRaj/Final?:language=en-GB&amp;:embed=true&amp;:sid=&amp;:redirect=auth' /> <param name='toolbar' value='yes' /><param name='static_image' value='https://public.tableau.com/static/images/Re/RealEstate-AdityaRaj/Final/1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div><script type='text/javascript'>var divElement = document.getElementById('viz1761234763395');var vizElement = divElement.getElementsByTagName('object')[0];if (divElement.offsetWidth > 800) { vizElement.style.width='1680px';vizElement.style.height='869px';} else if (divElement.offsetWidth > 500) { vizElement.style.width='1680px';vizElement.style.height='869px';} else { vizElement.style.width='100%';vizElement.style.height='1277px';} var scriptElement = document.createElement('script');scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>"
+        }
+      ],
+      "documents": [
+        {
+          "title": "Real Estate Project Report",
+          "file": "/projects/real-estate/Real%20Estate%20-Aditya.pdf",
+          "description": "Detailed methodology, feature engineering, and findings for the project.",
+          "type": "pdf",
+          "displayMode": "scrollable"
+        }
+      ]
     }
   },
   {
@@ -137,6 +227,7 @@
     "type": "computer-vision",
     "description": "Built a robust real-time chessboard state recognition system using YOLOv8, capable of detecting and classifying chess pieces from live camera feeds at over 30 FPS. Achieved 98.7% mAP@50 IoU on diverse chessboard configurations using advanced training techniques and a curated Kaggle dataset. Enabled automated gameplay analysis and integration with chess engines for move prediction and AR learning tools.",
     "shortDescription": "AI-powered chess analysis and training tool",
+    "thumbnail": "/projects/chess-helper/thumbnail.svg",
     "category": "Computer Vision",
     "featured": true,
     "startDate": "2023-02-15",
@@ -161,6 +252,16 @@
       "type": "cloud",
       "platform": "Vercel",
       "status": "active"
+    },
+    "highlights": [
+      "Annotated 4k+ board states and augmented synthetic angles to boost robustness under dim lighting.",
+      "Optimized YOLOv8 model with TensorRT so the move detector holds 30 FPS on consumer GPUs.",
+      "Integrated Stockfish suggestions and AR overlays, enabling coaching tips after every predicted move."
+    ],
+    "metrics": {
+      "map": "98.7% mAP@50 on validation set",
+      "fps": ">30 frames per second on RTX 2060",
+      "latency": "<120 ms board state refresh"
     }
   },
   {
@@ -188,8 +289,18 @@
       "architecture": "CNN",
       "metrics": {
         "accuracy": "98%",
-        "inferenceTime": "45ms"
+        "inferenceTime": "45 ms"
       }
+    },
+    "highlights": [
+      "Engineered multi-head CNN that performs attribute, nationality, and emotion prediction in a single pass.",
+      "Implemented OpenCV preprocessing pipeline to normalise lighting and align facial landmarks automatically.",
+      "Delivered responsive web demo so users can test live camera feeds with privacy-safe caching."
+    ],
+    "metrics": {
+      "classes": "21 emotions & demographics supported",
+      "dataset": "Trained on 60k labelled face images",
+      "deployment": "Runs at 22 FPS on CPU-only laptops"
     }
   },
   {
@@ -198,6 +309,7 @@
     "type": "nlp",
     "description": "Natural Language Processing system that analyzes sentiment and engagement patterns in LinkedIn posts using advanced NLP techniques. Automated web scraping and sentiment analysis of LinkedIn posts, delivering 95%+ accuracy in content classification.",
     "shortDescription": "NLP-based LinkedIn post analyzer",
+    "thumbnail": "/projects/linkedin-sentiment/thumbnail.svg",
     "category": "Natural Language Processing",
     "featured": false,
     "startDate": "2023-04-15",
@@ -218,6 +330,16 @@
         "accuracy": "91%",
         "f1Score": "0.89"
       }
+    },
+    "highlights": [
+      "Developed Puppeteer-based scraper that collects posts, reactions, and comments while respecting LinkedIn rate limits.",
+      "Fine-tuned BERT classifier with class-weighting to handle imbalanced engagement labels.",
+      "Visualised sentiment trends and virality factors so marketing teams can plan content calendars."
+    ],
+    "metrics": {
+      "datasetSize": "10k+ LinkedIn posts processed",
+      "classification": "95% precision on high-engagement posts",
+      "automation": "Daily incremental refresh with headless jobs"
     }
   },
   {
@@ -245,6 +367,16 @@
       "github": "https://github.com/codingpro-ai/planto-vscode",
       "live": "https://planto.ai/"
     },
-    "jobId": "ds-ml-intern-plantoai-2024"
+    "jobId": "ds-ml-intern-plantoai-2024",
+    "highlights": [
+      "Shipped design system and theming engine that keeps VS Code panels brand-aligned without impacting performance.",
+      "Implemented screenshot-to-UI workflow that turns PNG mocks into React components through structured prompts.",
+      "Created workspace memory and prompt caching so engineers receive context-aware suggestions across sessions."
+    ],
+    "metrics": {
+      "languageCoverage": "16+ programming languages supported",
+      "latency": "Sub-2s suggestion latency with local caching",
+      "betaTeams": "Adopted by 4 distributed product squads"
+    }
   }
 ]

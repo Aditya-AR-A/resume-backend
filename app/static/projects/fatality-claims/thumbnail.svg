@@ -1,0 +1,127 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0F172A"/>
+
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="claimsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="forecastGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="analyticsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+
+  <!-- Circuit Pattern Background -->
+  <g opacity="0.1">
+    <path d="M50 50 L100 50 L100 100 L150 100" stroke="#3B82F6" stroke-width="1" fill="none"/>
+    <path d="M250 80 L300 80 L300 130 L350 130" stroke="#10B981" stroke-width="1" fill="none"/>
+    <path d="M80 200 L130 200 L130 250 L180 250" stroke="#F59E0B" stroke-width="1" fill="none"/>
+    <circle cx="100" cy="50" r="3" fill="#3B82F6"/>
+    <circle cx="300" cy="80" r="3" fill="#10B981"/>
+    <circle cx="130" cy="200" r="3" fill="#F59E0B"/>
+  </g>
+
+  <!-- Claims Documents -->
+  <g transform="translate(60, 100)">
+    <!-- Claim form 1 -->
+    <rect x="10" y="10" width="35" height="45" rx="2" fill="url(#claimsGradient)" opacity="0.9"/>
+    <rect x="15" y="15" width="25" height="3" fill="#FFFFFF" opacity="0.8"/>
+    <rect x="15" y="22" width="20" height="2" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="15" y="27" width="25" height="2" fill="#FFFFFF" opacity="0.7"/>
+    <rect x="15" y="32" width="18" height="2" fill="#FFFFFF" opacity="0.5"/>
+    <text x="27" y="50" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">CLAIM</text>
+    <!-- Claim form 2 -->
+    <rect x="20" y="5" width="35" height="45" rx="2" fill="url(#claimsGradient)" opacity="0.7"/>
+    <rect x="25" y="10" width="25" height="3" fill="#FFFFFF" opacity="0.6"/>
+    <text x="37" y="45" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">CLAIM</text>
+    <!-- Claim form 3 -->
+    <rect x="30" y="0" width="35" height="45" rx="2" fill="url(#claimsGradient)" opacity="0.5"/>
+    <rect x="35" y="5" width="25" height="3" fill="#FFFFFF" opacity="0.4"/>
+    <text x="47" y="40" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">CLAIM</text>
+  </g>
+
+  <!-- Forecasting Chart -->
+  <g transform="translate(180, 100)">
+    <!-- Chart area -->
+    <rect x="10" y="10" width="80" height="60" rx="4" fill="url(#forecastGradient)" opacity="0.1"/>
+    <!-- Trend line -->
+    <path d="M15 55 L25 45 L35 50 L45 35 L55 40 L65 25 L75 30 L85 20"
+          stroke="url(#forecastGradient)" stroke-width="3" fill="none"/>
+    <!-- Data points -->
+    <circle cx="25" cy="45" r="3" fill="#FFFFFF"/>
+    <circle cx="45" cy="35" r="3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="65" cy="25" r="3" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="85" cy="20" r="3" fill="#FFFFFF" opacity="0.4"/>
+    <!-- Grid lines -->
+    <g opacity="0.3">
+      <line x1="15" y1="25" x2="85" y2="25" stroke="#FFFFFF" stroke-width="1"/>
+      <line x1="15" y1="40" x2="85" y2="40" stroke="#FFFFFF" stroke-width="1"/>
+      <line x1="15" y1="55" x2="85" y2="55" stroke="#FFFFFF" stroke-width="1"/>
+    </g>
+    <text x="50" y="85" font-family="Arial, sans-serif" font-size="10" fill="#3B82F6" text-anchor="middle">FORECAST</text>
+  </g>
+
+  <!-- Analytics Dashboard -->
+  <g transform="translate(300, 180)">
+    <!-- Dashboard screen -->
+    <rect x="5" y="10" width="40" height="30" rx="3" fill="url(#analyticsGradient)" opacity="0.9"/>
+    <!-- KPI metrics -->
+    <rect x="10" y="15" width="15" height="6" rx="1" fill="#FFFFFF" opacity="0.8"/>
+    <rect x="10" y="25" width="12" height="4" rx="1" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="27" y="15" width="13" height="6" rx="1" fill="#FFFFFF" opacity="0.7"/>
+    <rect x="27" y="25" width="10" height="4" rx="1" fill="#FFFFFF" opacity="0.5"/>
+    <!-- Trend indicator -->
+    <path d="M15 35 L25 30 L35 35" stroke="#10B981" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Data Flow Lines -->
+  <g opacity="0.8">
+    <!-- From claims to forecast -->
+    <path d="M140 160 Q170 150, 180 140" stroke="#F59E0B" stroke-width="3" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- From forecast to analytics -->
+    <path d="M260 140 Q290 160, 300 180" stroke="#3B82F6" stroke-width="3" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Feedback loop -->
+    <path d="M320 200 Q250 220, 140 200" stroke="#10B981" stroke-width="2" fill="none" stroke-dasharray="3,3" opacity="0.6">
+      <animate attributeName="stroke-dashoffset" values="0;6;0" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Floating Data Particles -->
+  <g opacity="0.6">
+    <circle cx="150" cy="100" r="2" fill="#F59E0B">
+      <animate attributeName="cy" values="100;90;100" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="80" r="2" fill="#3B82F6">
+      <animate attributeName="cy" values="80;70;80" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="120" r="2" fill="#10B981">
+      <animate attributeName="cy" values="120;110;120" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Tech Labels -->
+  <text x="100" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F59E0B">CLAIMS</text>
+  <text x="200" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3B82F6">FORECAST</text>
+  <text x="320" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10B981">ANALYTICS</text>
+
+  <!-- Title -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Fatality Claims Forecasting</text>
+  <text x="200" y="60" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Predictive Analytics & Automation</text>
+</svg>

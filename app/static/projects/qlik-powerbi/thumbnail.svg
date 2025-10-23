@@ -1,0 +1,118 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0F172A"/>
+
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="powerbiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="qlikGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tableauGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+
+  <!-- Circuit Pattern Background -->
+  <g opacity="0.1">
+    <path d="M50 50 L100 50 L100 100 L150 100" stroke="#3B82F6" stroke-width="1" fill="none"/>
+    <path d="M250 80 L300 80 L300 130 L350 130" stroke="#10B981" stroke-width="1" fill="none"/>
+    <path d="M80 200 L130 200 L130 250 L180 250" stroke="#F59E0B" stroke-width="1" fill="none"/>
+    <circle cx="100" cy="50" r="3" fill="#3B82F6"/>
+    <circle cx="300" cy="80" r="3" fill="#10B981"/>
+    <circle cx="130" cy="200" r="3" fill="#F59E0B"/>
+  </g>
+
+  <!-- Dashboard Screens -->
+  <g transform="translate(50, 80)">
+    <!-- Power BI Dashboard -->
+    <rect x="10" y="10" width="80" height="60" rx="4" fill="url(#powerbiGradient)" opacity="0.9"/>
+    <rect x="10" y="10" width="80" height="12" rx="4" fill="url(#powerbiGradient)" opacity="0.7"/>
+    <!-- Charts inside Power BI -->
+    <rect x="15" y="30" width="15" height="25" fill="#FFFFFF" opacity="0.8"/>
+    <rect x="35" y="35" width="15" height="20" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="55" y="40" width="15" height="15" fill="#FFFFFF" opacity="0.7"/>
+    <rect x="75" y="45" width="10" height="10" fill="#FFFFFF" opacity="0.5"/>
+    <!-- KPI cards -->
+    <rect x="15" y="60" width="25" height="8" rx="2" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="45" y="60" width="25" height="8" rx="2" fill="#FFFFFF" opacity="0.4"/>
+    <text x="50" y="22" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Power BI</text>
+  </g>
+
+  <!-- Qlik Sense Dashboard -->
+  <g transform="translate(150, 100)">
+    <rect x="10" y="10" width="80" height="60" rx="4" fill="url(#qlikGradient)" opacity="0.9"/>
+    <rect x="10" y="10" width="80" height="12" rx="4" fill="url(#qlikGradient)" opacity="0.7"/>
+    <!-- Qlik visualizations -->
+    <circle cx="30" cy="35" r="8" fill="#FFFFFF" opacity="0.7"/>
+    <rect x="45" y="30" width="20" height="10" rx="2" fill="#FFFFFF" opacity="0.8"/>
+    <rect x="15" y="50" width="30" height="4" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="50" y="50" width="25" height="4" fill="#FFFFFF" opacity="0.5"/>
+    <text x="50" y="22" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Qlik Sense</text>
+  </g>
+
+  <!-- Tableau Dashboard -->
+  <g transform="translate(250, 120)">
+    <rect x="10" y="10" width="80" height="60" rx="4" fill="url(#tableauGradient)" opacity="0.9"/>
+    <rect x="10" y="10" width="80" height="12" rx="4" fill="url(#tableauGradient)" opacity="0.7"/>
+    <!-- Tableau elements -->
+    <polygon points="25,30 35,25 45,30 35,45" fill="#FFFFFF" opacity="0.8"/>
+    <rect x="50" y="35" width="15" height="8" rx="2" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="30" cy="50" r="6" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="45" cy="50" r="6" fill="#FFFFFF" opacity="0.5"/>
+    <text x="50" y="22" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Tableau</text>
+  </g>
+
+  <!-- Data Flow Connections -->
+  <g opacity="0.8">
+    <!-- Connecting the dashboards -->
+    <path d="M130 140 Q140 150, 150 140" stroke="#F59E0B" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+    <path d="M230 140 Q240 150, 250 140" stroke="#10B981" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+    <!-- Central data hub -->
+    <circle cx="200" cy="160" r="12" fill="#8B5CF6" opacity="0.8"/>
+    <text x="200" y="166" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">ETL</text>
+    <!-- Data flows to central hub -->
+    <path d="M90 120 Q140 140, 188 160" stroke="#3B82F6" stroke-width="3" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M190 120 Q200 140, 212 160" stroke="#10B981" stroke-width="3" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M290 120 Q260 140, 212 160" stroke="#F59E0B" stroke-width="3" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Floating Data Particles -->
+  <g opacity="0.6">
+    <circle cx="150" cy="100" r="2" fill="#3B82F6">
+      <animate attributeName="cy" values="100;90;100" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="80" r="2" fill="#F59E0B">
+      <animate attributeName="cy" values="80;70;80" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="120" r="2" fill="#10B981">
+      <animate attributeName="cy" values="120;110;120" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Tech Labels -->
+  <text x="90" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F59E0B">POWER BI</text>
+  <text x="190" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10B981">QLIK</text>
+  <text x="290" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3B82F6">TABLEAU</text>
+
+  <!-- Title -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">BI Dashboard Suite</text>
+  <text x="200" y="60" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Qlik Sense, Power BI & Tableau Integration</text>
+</svg>
