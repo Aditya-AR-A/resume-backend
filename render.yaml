@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: resume-backend
+    env: docker
+    plan: starter
+    region: oregon
+    autoDeploy: true
+    dockerfilePath: Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: DEBUG
+        value: "false"
+      - key: DATA_DIR
+        value: /app/data
+      - key: STATIC_DIR
+        value: /app/app/static
+
