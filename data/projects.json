@@ -1,68 +1,69 @@
 [
   {
     "id": "llm-agent-integration",
-    "name": "LLM-Powered Call Agent Integration",
+    "name": "Voice-Based AI Booking Agent",
     "type": "ai-platform",
-    "description": "Enterprise-grade agentic workflow unifying OpenAI function calling, LiveKit streaming, and SIP integration to automate cab-service and hiring hotlines. Built orchestration to listen to live conversations, route intents, and trigger downstream automations with audit-ready transcripts.",
-    "shortDescription": "Real-time LLM call agent that automates taxi booking and hiring workflows",
+    "description": "Built a real-time voice-based AI agent for automated cab booking. Used speech-to-text and LLMs for intent detection and slot extraction, reducing booking handling time by 30–35% and achieving <5% human call-transfer rate during live testing while maintaining >90% booking success rate across varied user inputs.",
+    "shortDescription": "Real-time voice-based AI agent for automated cab booking",
     "thumbnail": "/projects/llm-agent/thumbnail.svg",
     "category": "AI/ML Engineering",
     "featured": true,
-    "startDate": "2025-06-01",
+    "startDate": "2024-09-01",
     "status": "active",
     "skills": [
       "Python",
       "FastAPI",
       "LLMs",
-      "OpenAI API",
-      "LiveKit",
-      "WebSockets",
-      "SIP Integration",
-      "Prompt Engineering",
-      "Automation"
+      "REST APIs",
+      "MongoDB"
     ],
     "jobId": "ai-python-dev-2025",
     "highlights": [
-      "Connected Twilio SIP trunks, LiveKit streaming audio, and OpenAI Realtime APIs to maintain human-like dialogues during dispatcher calls.",
-      "Implemented intent router and tool execution layer that triggers ride bookings, OTP verification, and CRM updates off live speech.",
-      "Delivered compliance-friendly transcripts and analytics dashboards so operations teams can audit conversations in minutes."
+      "Built a real-time voice-based AI agent for automated cab booking.",
+      "Used speech-to-text and LLMs for intent detection and slot extraction.",
+      "Reduced booking handling time by 30–35%.",
+      "Achieved <5% human call-transfer rate during live testing.",
+      "Maintained >90% booking success rate across varied user inputs."
     ],
     "metrics": {
-      "callAutomation": "35+ concurrent dispatcher calls automated",
-      "handoffReduction": "40% reduction in manual escalations",
-      "latency": "<250 ms average turn latency"
+      "bookingHandlingTime": "30–35% reduction",
+      "humanTransferRate": "<5%",
+      "bookingSuccessRate": ">90%"
     }
   },
   {
     "id": "recruitment-automation-platform",
-    "name": "AI Recruitment Automation Platform",
+    "name": "Autonomous Recruitment Agent System",
     "type": "ai-platform",
-    "description": "LLM-driven hiring assistant that triages candidate resumes, ranks applicants, and triggers follow-up sequences. Combined function calling, scoring heuristics, and dashboarding to cut HR review time by 50% while preserving explainability.",
-    "shortDescription": "LLM workflow that screens and ranks candidates with automated handoffs",
+    "description": "Developed an AI-driven system for resume matching and candidate screening. Used semantic embeddings and LLM reasoning for shortlisting decisions, improving shortlisting relevance by 35–40% over keyword-based filtering and reducing recruiter effort by ~50% and screening time by ~45%. Designed structured interview flows with consistent scoring logic.",
+    "shortDescription": "AI-driven resume matching and candidate screening with embeddings + LLM reasoning",
     "thumbnail": "/projects/recruitment-automation/thumbnail.svg",
     "category": "AI/ML Engineering",
     "featured": false,
-    "startDate": "2025-07-01",
+    "startDate": "2024-09-01",
     "status": "active",
     "skills": [
       "Python",
-      "FastAPI",
       "LLMs",
-      "Prompt Engineering",
-      "Automation",
-      "Tableau",
-      "Workflow Orchestration"
+      "embeddings",
+      "MongoDB",
+      "REST APIs",
+      "TypeScript",
+      "JavaScript"
     ],
     "jobId": "ai-python-dev-2025",
     "highlights": [
-      "Designed candidate parsing pipeline that enriches resumes with skill embeddings and ATS-ready summaries in under 20 seconds.",
-      "Introduced fairness guardrails and scoring explainers so recruiters can trace every shortlisting decision.",
-      "Published hiring dashboards tracking funnel velocity, candidate NPS, and conversion by skill cluster."
+      "Developed an AI-driven system for resume matching and candidate screening.",
+      "Used semantic embeddings and LLM reasoning for shortlisting decisions.",
+      "Improved shortlisting relevance by 35–40% over keyword-based filtering.",
+      "Automated early-stage screening workflows.",
+      "Reduced recruiter effort by ~50% and screening time by ~45%.",
+      "Designed structured interview flows with consistent scoring logic"
     ],
     "metrics": {
-      "screeningAcceleration": "50% reduction in manual resume screening time",
-      "autoFollowUps": "Automated email/SMS nudges for 100% of shortlisted candidates",
-      "atsReadyProfiles": "85% of profiles exported directly to ATS with zero edits"
+      "shortlistingRelevanceLift": "35–40%",
+      "recruiterEffortReduction": "~50%",
+      "screeningTimeReduction": "~45%"
     }
   },
   {
@@ -348,7 +349,7 @@
     "type": "developer-tools",
     "description": "Developed a Planto.ai-branded VS Code extension delivering context-aware AI assistance, screenshot-to-UI generation, and schema-aligned code scaffolding. Led UX, TypeScript architecture, and LLM integration to support 16+ programming languages for distributed teams.",
     "shortDescription": "AI-assisted VS Code workspace with visual-to-code automation",
-    "thumbnail": "/projects/vscode-extension/thumbnail.svg",
+    "thumbnail": "https://planto.ai/images/features2.webp",
     "category": "Developer Tools",
     "featured": true,
     "startDate": "2024-06-01",

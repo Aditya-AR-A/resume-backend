@@ -4,8 +4,48 @@
         "alt": "Profile"
     },
     "name": "Aditya Raj",
-    "title": "Data Scientist & Python Developer",
-    "about": "Software developer and data scientist with strong expertise in full-stack, deep learning, and machine learning. Experienced in building AI-powered tools (e.g. Chess Helper, VS Code Copilot extension), and delivering insights through structured models in Python/TensorFlow. Holds a Data Science Certification (IBM via Simplilearn) and demonstrated impact via notable projects in NLP, clustering, and predictive modeling.",
+    "title": "Applied AI Engineer",
+    "about": "Applied AI Engineer who builds and deploys production-ready LLM-powered automation systems. Strong in Python, FastAPI, prompt engineering, and API integration, with hands-on experience in multi-LLM orchestration, voice-based agents, and recruitment automation. Focused on creating reliable AI systems that reduce manual effort and scale in real-world environments.",
+    "technicalSkills": {
+        "Languages": [
+            "Python",
+            "TypeScript",
+            "JavaScript",
+            "Scala",
+            "C"
+        ],
+        "AI / ML": [
+            "LLMs",
+            "NLP",
+            "Prompt Engineering",
+            "Embeddings",
+            "Multi-LLM Orchestration",
+            "Hugging Face (model usage)",
+            "TensorFlow",
+            "PyTorch"
+        ],
+        "Frameworks": [
+            "FastAPI",
+            "REST API",
+            "DropWizard"
+        ],
+        "ML/Visualization": [
+            "Pandas",
+            "Numpy",
+            "Plotly",
+            "Scikit-learn",
+            "Tableau"
+        ],
+        "Databases": [
+            "MongoDB",
+            "SQL"
+        ],
+        "Tools": [
+            "Git",
+            "GitHub",
+            "VS Code"
+        ]
+    },
     "socialLinks": {
         "email": "adityaraj.anshukumar50@gmail.com",
         "github": "https://github.com/Aditya-AR-A",

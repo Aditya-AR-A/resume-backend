@@ -1,43 +1,34 @@
 [
+ 
   {
-    "id": "ai-python-dev-2025",
-    "title": "AI and Python Developer",
+    "id": "ai-python-dev-2024",
+    "title": "AI Engineer / Python Developer",
     "company": "Addmin Web World",
     "companyLogo": "https://addminwebworld.com/img/admologo-removebg.png",
     "position": "Full-time",
     "location": "Chandigarh, India",
-    "startDate": "2025-06-01",
+    "startDate": "2024-09-25",
     "isCurrent": true,
-    "description": "Developing and integrating AI models with SIP call agents to enable intelligent responses and function triggering. Leading projects involving OpenAI agent SDKs for hiring automation and previously for taxi booking services.",
+    "description": "Deliver end-to-end AI automation solutions for client-facing business workflows.",
     "responsibilities": [
-      "Integrate LLMs and AI models with SIP call agents for real-time dialogue and function execution",
-      "Design and deploy AI-driven workflows for customer and business automation",
-      "Develop prompt engineering strategies for diverse agent tasks",
-      "Lead new project for hiring automation using OpenAI agent SDKs",
-      "Previously built and maintained AI-powered taxi booking agent system",
-      "Collaborate with cross-functional teams to deploy scalable AI solutions",
-      "Implement backend APIs and services using Django and FastAPI",
-      "Developed an LLM-based automation platform for cab-service call handling, cutting manual intervention by 40%.",
-      "Built an AI-driven recruitment screening system that filters and ranks candidates, reducing HR review time by 50%.",
-      "Designed Tableau dashboards tracking automation KPIs including response latency, success rates, and efficiency gains."
+      "Deliver end-to-end AI automation solutions for client-facing business workflows.",
+      "Convert business requirements into agent-based AI systems with clear decision flows.",
+      "Architect and maintain multi-model LLM pipelines for reasoning, validation, and execution.",
+      "Integrate external AI services to support real-time conversational workflows.",
+      "Implement guardrails, fallback handling, and validation logic for production stability."
     ],
     "skills": [
       "Python",
-      "LLMs",
-      "Prompt Engineering",
-      "SIP Integration",
-      "OpenAI API",
       "FastAPI",
-      "Django",
-      "Voice Bots",
-      "Function Calling",
-      "API Integration",
-      "Webhooks",
-      "Twilio",
-      "Dialog Management",
-      "Hiring Automation",
-      "Taxi Booking Automation",
-      "Tableau"
+      "LLMs",
+      "OpenAI/Groq/Gemini",
+      "Hugging Face (model usage)",
+      "MongoDB",
+      "REST APIs",
+      "Prompt Engineering",
+      "NLP",
+      "JSON",
+      "Git"
     ],
     "projectIds": [
       "llm-agent-integration",
@@ -46,77 +37,34 @@
     "featured": true
   },
   {
-    "id": "data-scientist-cis-2024",
-    "title": "Data Scientist",
-    "company": "Corporate Incentive Solutions Pvt. Ltd.",
-    "companyLogo": "https://www.cispl.net.in/corporates/images/logo.png",
-    "position": "Full-time",
-    "location": "Chandigarh, India",
-    "startDate": "2024-09-01",
-    "endDate": "2025-05-31",
-    "isCurrent": false,
-    "description": "Modernized insurance analytics by rebuilding legacy Excel reporting in modern BI stacks and automating KPI delivery for business leadership.",
-    "responsibilities": [
-      "Migrated fatality-claim dashboards from Excel into Power BI, Tableau, and Qlik Sense/QlikView for automated visualization and scheduling.",
-      "Automated monthly, quarterly, and annual claim reports with Python ETL pipelines and Plotly-based analytics.",
-      "Delivered dashboards for growth forecasts and operational metrics to drive data-backed planning decisions.",
-      "Built analytics to track claim trends, processing time, and anomalies, reducing manual reporting effort by 60%."
-    ],
-    "skills": [
-      "Power BI",
-      "Tableau",
-      "Qlik Sense",
-      "QlikView",
-      "Python",
-      "Plotly",
-      "ETL",
-      "Insurance Analytics",
-      "Automation",
-      "Data Visualization",
-      "Excel",
-      "KPI Reporting"
-    ],
-    "projectIds": [
-      "qlik-powerbi-suite",
-      "fatality-claims-analytics"
-    ],
-    "featured": true
-  },
-  {
     "id": "ds-ml-intern-plantoai-2024",
-    "title": "Data Science and ML Intern",
-    "company": "planto.ai (Coding Pro)",
+    "title": "AI & Data Science Intern",
+    "company": "Coding Pro (Planto.AI)",
     "companyLogo": "https://planto.ai/images/planto-logo.png",
     "position": "Internship",
     "location": "Remote",
     "startDate": "2024-06-01",
-    "endDate": "2024-09-30",
+    "endDate": "2024-09-15",
     "isCurrent": false,
-    "description": "Worked on the creation of the planto.ai product, a VS Code extension. Responsible for designing the GUI in VS Code and integrating LLMs for improved responses and context management during the initial phases of the project. Gained valuable experience collaborating with the team and building a real-world AI product.",
+    "description": "Built core components of an early-stage AI copilot MVP for developer workflow automation.",
     "responsibilities": [
-      "Designed and implemented the GUI for the planto.ai VS Code extension",
-      "Integrated LLMs for better context management and response quality",
-      "Collaborated with the team to shape the initial phases of the product",
-      "Worked primarily with TypeScript and Next.js",
-      "Developed AI-powered features for the VS Code copilot extension with fine-tuning and UX enhancements across 16+ languages."
+      "Built core components of an early-stage AI copilot MVP for developer workflow automation.",
+      "Improved response relevance and task accuracy by 25–30% through prompt optimization.",
+      "Automated LLM output comparison and scoring pipelines.",
+      "Reduced manual evaluation effort by ~40%.",
+      "Cut model testing turnaround time from days to hours.",
+      "Supported UI integration using Next.js."
     ],
     "skills": [
-      "TypeScript",
-      "Next.js",
-      "VS Code Extension Development",
-      "LLMs",
-      "Context Management",
-      "GUI Design",
-      "AI Integration",
-      "Team Collaboration"
+      "Python",
+      "Next.JS",
+      "prompt engineering",
+      "LLM benchmarking",
+      "internal test suites",
+      "automated evaluation scripts",
+      "Vs Code"
     ],
-    "projectIds": [
-      "plantoai-vscode-copilot"
-    ],
-    "links": {
-      "company": "https://codingpro.online/",
-      "project": "https://planto.ai/"
-    },
-    "featured": false
+    "projectIds": [],
+    "featured": true
   }
 ]
